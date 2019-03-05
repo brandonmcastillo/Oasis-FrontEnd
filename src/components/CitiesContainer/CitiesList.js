@@ -1,15 +1,17 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import City from './City';
 
+// This is our city container component
 class CitiesList extends Component {
   render() {
-
     return (
       <div>
-         <div> 
-         {/* {cities} */}
-         </div>
+        <City />
+        <City />
+        <City />
+
       </div>
-    )
+    );
   }
 }
 
