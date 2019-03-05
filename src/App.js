@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import './components/Home/Info.css'
-
-
-
+import Info from './components/Home/Info'
 class App extends Component {
   render() {
     return (
       <div className="App">
-       
+        <Info />
       </div>
     );
   }
