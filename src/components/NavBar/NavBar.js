@@ -13,6 +13,8 @@ class NavBar extends Component {
             <Nav className="mr-auto">
               <Nav.Link href="/User">Sign In</Nav.Link>
               <Nav.Link href="/post">Sign Up</Nav.Link>
+              <Nav.Link href="/city">City</Nav.Link>
+              <Nav.Link href="/profile">Profile</Nav.Link>
             </Nav>
             <Form inline>
               <FormControl
