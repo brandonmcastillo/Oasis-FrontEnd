@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import Nav from './components/Navbar/Nav';
-import CityCarousel from './components/Home/CityCarousel';
+import NavBar from './components/NavBar/NavBar';
 
 import './App.css';
+import CityCarousel from './components/Home/CityCarousel';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Nav />
+        <NavBar />
         <CityCarousel />
-        <h1> Hello Programmer</h1>
+       
       </div>
     );
   }
