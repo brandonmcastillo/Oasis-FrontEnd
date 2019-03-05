@@ -22,7 +22,7 @@ class Info extends Component {
                         <Card.Title>Brandon Castillo</Card.Title>
                             <Card.Subtitle className="mb-2 text-muted">Vallejo, CA</Card.Subtitle>
                                 <Card.Text>
-                                "I've used this for my travels and it has helped me more than any application out there.""
+                                "I've used this for my travels and it has helped me more than any other app out there.""
                                 </Card.Text>
                     </Card.Body>
                 </Card></Col>
@@ -31,7 +31,7 @@ class Info extends Component {
                         <Card.Title>Michael Claus</Card.Title>
                             <Card.Subtitle className="mb-2 text-muted">San Francisco, CA</Card.Subtitle>
                                 <Card.Text>
-                                "This application changed my life! I discovered it in 2019."
+                                "This application changed my life! I discovered it in 2019. My friends and family will be using this"
                                 </Card.Text>
                     </Card.Body>
                 </Card></Col>
