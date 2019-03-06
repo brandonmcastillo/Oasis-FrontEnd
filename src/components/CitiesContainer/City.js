@@ -7,13 +7,7 @@ class City extends Component {
     return (
       <div>
         <Media>
-          <img
-            width={64}
-            height={64}
-            className="mr-3"
-            src={Sf}
-            alt="sf"
-          />
+          <img width={64} height={64} className="mr-3" src={Sf} alt="sf" />
           <Media.Body>
             <h5>San francisco</h5>
           </Media.Body>

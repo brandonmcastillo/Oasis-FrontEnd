@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
+import CitiesPostList from './CitiesPostList';
 
-export default class CityPostContainer extends Component {
+class CityPostContainer extends Component {
   render() {
     return (
       <div>
-        
+            <CitiesPostList />
+           
       </div>
     )
   }
 }
+
+export default CityPostContainer
