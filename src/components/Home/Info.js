@@ -7,7 +7,7 @@ class Info extends Component {
       <div>
         <Container >
           <Row>
-            <h3>Curious about what people have to say about Wayfarer?</h3>
+            <h3>What do our favorite customers think about Wayfarer?</h3>
           </Row>
           <Row>
             <Col sm={12} md={4}>
