@@ -1,15 +1,20 @@
-import React, { Component } from 'react';
-import { Media } from 'react-bootstrap';
-import Sf from './CitiesPosts/sf.jpeg';
+import React, { Component } from "react";
+import { Media } from "react-bootstrap";
+import Sf from "./CitiesPosts/sf.jpeg";
 
 class City extends Component {
+  passUpState = () => {
+    this.props.fetchOnClick(this.props.name, this.props.id);
+  };
+
   render() {
     return (
       <div>
         <Media>
           <img width={100} height={100} className="mr-3" src={Sf} alt="sf" />
           <Media.Body>
-            <h5>San francisco</h5>
+            <h5 id="cityName">{this.props.name}</h5>
+            <button onClick={this.passUpState}>City Button</button>
           </Media.Body>
         </Media>
       </div>

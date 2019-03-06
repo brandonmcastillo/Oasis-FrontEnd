@@ -1,18 +1,17 @@
-import React, { Component } from 'react'
-import CitiesPostList from './CitiesPostList';
-import {Button } from 'react-bootstrap';
+import React, { Component } from "react";
+import { Button } from "react-bootstrap";
+import CityHeader from "./CityHeader";
+import PostContainer from "./PostContainer";
 
 class CityPostContainer extends Component {
   render() {
     return (
       <div>
-            <h1>San Francisco</h1>
-            <Button variant="success">Success</Button>
-            <CitiesPostList />
-           
+        <CityHeader title={this.props.data.name} />
+        <PostContainer posts={this.props.posts} />
       </div>
-    )
+    );
   }
 }
 
-export default CityPostContainer
+export default CityPostContainer;
