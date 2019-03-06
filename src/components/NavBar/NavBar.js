@@ -6,12 +6,12 @@ class NavBar extends Component {
   render() {
     return (
       <div>
-        <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
-          <Navbar.Brand href="/">Wayfarer</Navbar.Brand>
+        <Navbar className="Nav" expand="lg" fixed="top">
+          <Navbar.Brand href="/"><h2>Wayfarer</h2></Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">
-              <Nav.Link href="/User">Sign In</Nav.Link>
+            <Nav className="ml-auto ">
+              <Nav.Link  href="/User">Sign In</Nav.Link>
               <Nav.Link href="/post">Sign Up</Nav.Link>
               <Nav.Link href="/city">City</Nav.Link>
               <Nav.Link href="/profile">Profile</Nav.Link>
@@ -22,7 +22,7 @@ class NavBar extends Component {
                 placeholder="Search"
                 className="mr-sm-2"
               />
-              <Button variant="outline-success">Search</Button>
+              <Button variant="outline-info">Search</Button>
             </Form>
           </Navbar.Collapse>
         </Navbar>

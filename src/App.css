@@ -31,3 +31,8 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  font-family: 'Nunito:300', sans-serif;
+  color: white;
+}

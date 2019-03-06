@@ -1,0 +1,18 @@
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+
+Nav {
+    background-color: #393e46;
+    color: white;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: white;
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+    color: #34a7b2
+}

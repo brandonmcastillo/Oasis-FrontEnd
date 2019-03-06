@@ -7,15 +7,15 @@ class Info extends Component {
       <div>
         <Container >
           <Row>
-            <h5>Hear what people have to say about Wayfarer!</h5>
+            <h3>What do our favorite customers think about Wayfarer?</h3>
           </Row>
           <Row>
-            <Col md={4}>
-              <Card style={{ width: '18rem' }}>
+            <Col sm={12} md={4}>
+              <Card className="Card" style={{ width: '18rem' }}>
                 <Card.Body>
                   <Card.Title>Amberly Wang</Card.Title>
                   <Card.Subtitle className="mb-2 text-muted">
-                    Fremont, CA
+                    <h6>Fremont, CA</h6>
                   </Card.Subtitle>
                   <Card.Text>
                     "Outstanding. I don't know what I'd do without it. I like to
@@ -24,12 +24,12 @@ class Info extends Component {
                 </Card.Body>
               </Card>
             </Col>
-            <Col md={4}>
-              <Card style={{ width: '18rem' }}>
+            <Col sm={12} md={4}>
+              <Card className="Card" style={{ width: '18rem' }}>
                 <Card.Body>
                   <Card.Title>Brandon Castillo</Card.Title>
                   <Card.Subtitle className="mb-2 text-muted">
-                    Vallejo, CA
+                  <h6>Vallejo, CA</h6>
                   </Card.Subtitle>
                   <Card.Text>
                     "I've used this for my travels and it has helped me more
@@ -38,12 +38,12 @@ class Info extends Component {
                 </Card.Body>
               </Card>
             </Col>
-            <Col md={4}>
-              <Card style={{ width: '18rem' }}>
+            <Col sm={12} md={4}>
+              <Card className="Card" style={{ width: '18rem' }}>
                 <Card.Body>
                   <Card.Title>Michael Claus</Card.Title>
                   <Card.Subtitle className="mb-2 text-muted">
-                    San Francisco, CA
+                    <h6>San Francisco, CA</h6>
                   </Card.Subtitle>
                   <Card.Text>
                     "This application changed my life! I discovered it in 2019.
