@@ -1,8 +1,54 @@
-.carousel {
-    /* margin-top: 15vh; */
-    max-height: 70vh;
-}
-
+/* Carousel */
 .carousel-inner {
     height: 90vh;
+    max-width: 100%;
 }
+
+.carousel-caption {
+    text-align: center;
+    bottom: 50px;
+    top: 48%;
+    transform: translateY(-50%);
+}
+
+img {
+    width: 100%; 
+    height: 80%;
+    object-fit: contain;
+    transition: filter .5s ease-in;
+    -webkit-filter: grayscale(0%); 
+    filter: grayscale(0%); 
+}
+
+img:hover {
+    -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%); 
+  }
+
+h1 {
+    font-size: 4.8em;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 10px;
+    font-size: 8vw;
+}
+/* Reflective Text */
+.real {
+	color: white;
+	margin: 0;
+}
+.refl {
+	color: white;margin: 0;
+	-moz-transform: scaleY(-1);
+       -o-transform: scaleY(-1);
+       -webkit-transform: scaleY(-1);
+       transform: scaleY(-1);
+	-webkit-mask-image: -webkit-gradient(linear, right top, right bottom, from(transparent), color-stop(20%, transparent), to(rgba(0, 0, 0, 0.4)));
+}
+#header {
+	display:inline-block;
+	background-color: transparent;
+	padding: 20px 40px;
+	border-radius:10px;
+}
+
+

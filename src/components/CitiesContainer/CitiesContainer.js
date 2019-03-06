@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import CitiesList from './CitiesList';
 import { Container, Row, Col } from 'react-bootstrap';
 import CityPostContainer from './CitiesPosts/CityPostContainer';
-
+import './CitiesContainer.css'
 // This is our main container that includes cities and post list component
 class CitiesContainer extends Component {
   render() {
