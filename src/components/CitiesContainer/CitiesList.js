@@ -9,6 +9,7 @@ class CitiesList extends Component {
         <City />
         <City />
         <City />
+        <City />
 
       </div>
     );

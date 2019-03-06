@@ -15,7 +15,7 @@ class CitiesContainer extends Component {
               <CitiesList />
             </Col>
             <Col sm={8}>
-                <CityPostContainer />
+              <CityPostContainer />
             </Col>
           </Row>
         </Container>

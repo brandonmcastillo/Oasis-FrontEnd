@@ -15,12 +15,12 @@ class CityHeader extends Component {
             alt="good"
           />
           <Media.Body>
-            <h5>
+            <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
               placeat cupiditate nulla quod labore? Hic voluptatem ex error ut
               optio architecto recusandae et, soluta sunt natus fugit libero!
               Distinctio, ducimus?
-            </h5>
+            </p>
           </Media.Body>
         </Media>
       </div>
