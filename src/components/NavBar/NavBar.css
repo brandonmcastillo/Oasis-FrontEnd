@@ -14,5 +14,18 @@ Nav {
 }
 
 .navbar-light .navbar-nav .nav-link:hover{
-    color: #34a7b2
+    color: #34a7b2;
+    cursor: pointer;
+}
+
+.nav-modal-link {
+    margin: 8px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-modal-link:hover {
+    cursor: pointer;
+    color: #34a7b2;
+    text-decoration: none
 }
