@@ -1,0 +1,13 @@
+.list-group-item, .title  {
+    color: black;
+}
+
+.Profile-Card {
+    margin-left: 30px;
+}
+
+.Profile-image {
+    height: 60px;
+    width: 60px;
+    margin: auto;
+}
