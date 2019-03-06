@@ -1,25 +1,10 @@
-import React, { Component } from 'react';
-import Post from './Post';
+import React, { Component } from "react";
+import Post from "./Post";
+
 class PostContainer extends Component {
-  state = {
-    posts: [
-      {
-        title: 'Hello Programmer',
-        comment: 'This is sweet'
-      },
-      {
-        title: 'Code is fun and frustratin',
-        comment: ' Great team work guys'
-      },
-      {
-        title: 'you got this',
-        comment: 'This is actually awesome. React is actually fun to learn'
-      }
-    ]
-  };
   render() {
-    let posts = this.state.posts.map((post, idx) => {
-      return <Post post={post.comment} key={idx} />;
+    let posts = this.props.posts.map((post, idx) => {
+      return <Post post={post.content} key={idx} />;
     });
     return (
       <div>
