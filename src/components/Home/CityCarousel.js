@@ -35,8 +35,8 @@ class CityCarousel extends Component {
             <Carousel.Item> <img className="picture d-block w-100" src={Seattle} alt="First slide" />
               <Carousel.Caption>
                 <div id="header">
-                  <h1 class="real">SEATTLE</h1> 
-                  <h1 class="refl">SEATTLE</h1>
+                  <h1 className="real">SEATTLE</h1> 
+                  <h1 className="refl">SEATTLE</h1>
                   </div>
               </Carousel.Caption>
             </Carousel.Item>
@@ -44,8 +44,8 @@ class CityCarousel extends Component {
             <Carousel.Item><img className="picture d-block w-100" src={Sanfrancisco} alt="Second slide" />
               <Carousel.Caption>
                 <div id="header">
-                  <h1 class="real">SF BAY AREA</h1>
-                  <h1 class="refl">SF BAY AREA</h1>
+                  <h1 className="real">SF BAY AREA</h1>
+                  <h1 className="refl">SF BAY AREA</h1>
               </div>  
               </Carousel.Caption>
              </Carousel.Item>
@@ -53,16 +53,16 @@ class CityCarousel extends Component {
             <Carousel.Item><img className="picture d-block w-100" src={London} alt="Third slide" />
               <Carousel.Caption>
                 <div id="header">
-                  <h1 class="real">LONDON</h1> 
-                  <h1 class="refl">LONDON</h1> 
+                  <h1 className="real">LONDON</h1> 
+                  <h1 className="refl">LONDON</h1> 
                   </div>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item><img className="picture d-block w-100" src={Sydney} alt="Fourth slide" />
               <Carousel.Caption>
                 <div id="header">
-                <h1 class="real">SYDNEY</h1> 
-                <h1 class="refl">SYDNEY</h1> 
+                <h1 className="real">SYDNEY</h1> 
+                <h1 className="refl">SYDNEY</h1> 
                 </div>
               </Carousel.Caption>
             </Carousel.Item>

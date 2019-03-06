@@ -1,9 +1,22 @@
 import React, { Component } from 'react';
 import { Navbar, Form, FormControl, Button, Nav } from 'react-bootstrap';
 import './NavBar.css';
+import SignUpForm from '../Forms/SignUpForm'
+import LoginForm from '../Forms/LoginForm'
 
 class NavBar extends Component {
+  state = {
+    modalShow: false,
+    loginModalShow: false
+  }
+  // modalClose = () => {
+  //   this.setState({ modalShow: false })
+  // };
+
   render() {
+    let modalClose = () => this.setState({ modalShow: false });
+    let loginModalClose = () => this.setState({ loginModalShow: false });
+
     return (
       <div>
         <Navbar className="Nav" expand="lg" fixed="top">
@@ -11,8 +24,10 @@ class NavBar extends Component {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto ">
-              <Nav.Link  href="/User">Sign In</Nav.Link>
-              <Nav.Link href="/post">Sign Up</Nav.Link>
+              <a href="#"className="nav-modal-link"onClick={() => this.setState({loginModalShow: true})}>Sign In</a>
+              <LoginForm show={this.state.loginModalShow} onHide={loginModalClose}/>
+              <a href="#"className="nav-modal-link" onClick={() => this.setState({ modalShow: true })}>Sign Up</a>
+              <SignUpForm show={this.state.modalShow} onHide={modalClose}/>
               <Nav.Link href="/city">City</Nav.Link>
               <Nav.Link href="/profile">Profile</Nav.Link>
             </Nav>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Form, Col, InputGroup } from 'react-bootstrap';
-import BgVideo from './BgVideo';
+import { Form, Col, InputGroup, Modal, Button } from 'react-bootstrap';
+// import BgVideo from './BgVideo';
 import './Form.css';
 class LoginForm extends Component {
   constructor(...args) {
@@ -21,10 +21,19 @@ class LoginForm extends Component {
   render() {
     const { validated } = this.state;
     return (
-      <div>
-        {/* <BgVideo className="background"/> */}
-        <div className="foreGround">
-        <Form
+      <Modal 
+        show={this.props.show} 
+        onHide={this.props.onHide} 
+        aria-labelledby="contained-modal-title-vcenter"
+        centered>
+        <Modal.Header>
+          <Modal.Title id="contained-modal-title-vcenter">
+            Sign in
+          </Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body>
+          <Form
           className="LoginForm"
           noValidate
           validated={validated}
@@ -64,8 +73,11 @@ class LoginForm extends Component {
             onClick={this.props.handleLogIn}
           />
         </Form>
-        </div>
-      </div>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button onClick={this.props.onHide}>Close</Button>
+        </Modal.Footer>
+      </Modal>
     );
   }
 }

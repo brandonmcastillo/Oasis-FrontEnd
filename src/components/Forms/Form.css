@@ -5,12 +5,20 @@
         margin: auto;
 }
 
+.modal-title {
+    color: black;
+}
+
+label {
+    color: black;
+}
+
 .form-control {
     border: .5px solid grey;
 }
-
+/* 
 .LoginForm {
     max-width: 500px;
         padding: 5em;
         margin: auto;
-}
+} */
