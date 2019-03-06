@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Form, Col, InputGroup, Button } from 'react-bootstrap'
-
+import './Form.css'
 class SignUpForm extends Component {
     constructor(...args) {
       super(...args);
@@ -21,6 +21,7 @@ class SignUpForm extends Component {
       const { validated } = this.state;
       return (
         <Form
+          className="Form"
           noValidate
           validated={validated}
           onSubmit={e => this.handleSubmit(e)}
@@ -44,7 +45,8 @@ class SignUpForm extends Component {
                   <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text>
                 </InputGroup.Prepend>
                           <Form.Control
-                  name="Username"
+                  name="username"
+                  onChange={this.props.handleInput}
                   type="text"
                   placeholder="Username"
                   aria-describedby="inputGroupPrepend"
@@ -55,13 +57,15 @@ class SignUpForm extends Component {
                 </Form.Control.Feedback>
               </InputGroup>
             </Form.Group>
-        </Form.Row>
+          </Form.Row>
         <Form.Row>
             <Form.Group as={Col} md="12" controlId="validationCustom01">
               <Form.Label>Password</Form.Label>
               <Form.Control
                 required
-                type="text"
+                name="password"
+                onChange={this.props.handleInput}
+                type="password"
                 placeholder="Password"
               />
               <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
@@ -69,11 +73,13 @@ class SignUpForm extends Component {
         </Form.Row>
         <Form.Row>
             <Form.Group as={Col} md="12" controlId="validationCustom01">
-              <Form.Label>Verify Password</Form.Label>
+              <Form.Label>Email</Form.Label>
               <Form.Control
                 required
+                name="email"
+                onChange={this.props.handleInput}
                 type="text"
-                placeholder="Password"
+                placeholder="email"
               />
               <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             </Form.Group>
@@ -81,7 +87,7 @@ class SignUpForm extends Component {
          <Form.Row>
             <Form.Group as={Col} md="12" controlId="validationCustom03">
               <Form.Label> Favorite City</Form.Label>
-              <Form.Control name="city" type="text" placeholder="City" required />
+              <Form.Control name="city" onChange={this.props.handleInput} type="text" placeholder="City" required />
               <Form.Control.Feedback type="invalid">
                 Please provide a valid city.
               </Form.Control.Feedback>
@@ -94,7 +100,7 @@ class SignUpForm extends Component {
               feedback="You must agree before submitting."
             />
           </Form.Group>
-          <Button type="submit">Submit form</Button>
+          <input value='Submit' type='submit' onClick={this.props.handleSignUp} />
         </Form>
       );
     }

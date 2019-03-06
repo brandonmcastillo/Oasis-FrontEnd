@@ -1,0 +1,16 @@
+.Form {
+    margin-top: 140px;
+    max-width: 700px;
+        padding: 5em;
+        margin: auto;
+}
+
+.form-control {
+    border: .5px solid grey;
+}
+
+.LoginForm {
+    max-width: 500px;
+        padding: 5em;
+        margin: auto;
+}
