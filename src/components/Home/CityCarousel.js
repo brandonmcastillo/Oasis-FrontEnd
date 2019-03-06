@@ -32,7 +32,7 @@ class CityCarousel extends Component {
               direction={direction}
               onSelect={this.handleSelect}
             >
-            <Carousel.Item> <img className="d-block w-100" src={Seattle} alt="First slide" />
+            <Carousel.Item> <img className="picture d-block w-100" src={Seattle} alt="First slide" />
               <Carousel.Caption>
                 <div id="header">
                   <h1 class="real">SEATTLE</h1> 
@@ -41,7 +41,7 @@ class CityCarousel extends Component {
               </Carousel.Caption>
             </Carousel.Item>
 
-            <Carousel.Item><img className="d-block w-100" src={Sanfrancisco} alt="Second slide" />
+            <Carousel.Item><img className="picture d-block w-100" src={Sanfrancisco} alt="Second slide" />
               <Carousel.Caption>
                 <div id="header">
                   <h1 class="real">SF BAY AREA</h1>
@@ -50,7 +50,7 @@ class CityCarousel extends Component {
               </Carousel.Caption>
              </Carousel.Item>
 
-            <Carousel.Item><img className="d-block w-100" src={London} alt="Third slide" />
+            <Carousel.Item><img className="picture d-block w-100" src={London} alt="Third slide" />
               <Carousel.Caption>
                 <div id="header">
                   <h1 class="real">LONDON</h1> 
@@ -58,7 +58,7 @@ class CityCarousel extends Component {
                   </div>
               </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item><img className="d-block w-100" src={Sydney} alt="Fourth slide" />
+            <Carousel.Item><img className="picture d-block w-100" src={Sydney} alt="Fourth slide" />
               <Carousel.Caption>
                 <div id="header">
                 <h1 class="real">SYDNEY</h1> 
