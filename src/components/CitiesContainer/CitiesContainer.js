@@ -13,21 +13,17 @@ class CitiesContainer extends Component {
     selectedCity: "San Francisco",
     cityId: "",
     data: [],
-    posts: []
+    posts: [],
+    cities: []
   };
 
   componentDidMount = () => {
-    CityModel.oneCity("5c7efb5c600c131fdc71f5e1").then(response => {
+    CityModel.all().then(response => {
+      console.log(response.data, "before setstate");
       this.setState({
-        selectedCity: response.data.name,
-        data: response.data,
-        cityId: response.data._id
+        cities: response.data
       });
-      PostModel.cityPosts("5c7efb5c600c131fdc71f5e1").then(response => {
-        this.setState({
-          posts: response.data
-        });
-      });
+      console.log(this.state.cities);
     });
   };
 
@@ -47,13 +43,22 @@ class CitiesContainer extends Component {
   };
 
   render() {
+    let citiesList;
+    if (this.state.cities.length === 0) {
+      citiesList = <p>Loading</p>;
+    } else {
+      citiesList = (
+        <CitiesList
+          fetchOnClick={this.fetchOnClick}
+          cities={this.state.cities}
+        />
+      );
+    }
     return (
       <div>
         <Container>
           <Row>
-            <Col sm={4}>
-              <CitiesList fetchOnClick={this.fetchOnClick} />
-            </Col>
+            <Col sm={4}>{citiesList}</Col>
             <Col sm={8}>
               <CityPostContainer
                 data={this.state.data}
