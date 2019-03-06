@@ -1,0 +1,16 @@
+
+
+footer ul {
+    padding: 0;
+    list-style: none
+}
+
+footer li {
+    display: inline-block
+}
+
+footer img {
+    margin: 15px;
+    height: 25px;
+    width: 25px
+}
