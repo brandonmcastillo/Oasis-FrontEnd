@@ -1,38 +1,42 @@
-import React, { Component } from 'react'
-import { Form, Col, InputGroup, Button } from 'react-bootstrap'
-import './Form.css'
+import React, { Component } from 'react';
+import { Form, Col, InputGroup } from 'react-bootstrap';
+import BgVideo from './BgVideo';
+import './Form.css';
 class LoginForm extends Component {
-    constructor(...args) {
-      super(...args);
-  
-      this.state = { validated: false };
+  constructor(...args) {
+    super(...args);
+
+    this.state = { validated: false };
+  }
+
+  handleSubmit(event) {
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
     }
-  
-    handleSubmit(event) {
-      const form = event.currentTarget;
-      if (form.checkValidity() === false) {
-        event.preventDefault();
-        event.stopPropagation();
-      }
-      this.setState({ validated: true });
-    }
-  
-    render() {
-      const { validated } = this.state;
-      return (
+    this.setState({ validated: true });
+  }
+
+  render() {
+    const { validated } = this.state;
+    return (
+      <div>
+        {/* <BgVideo className="background"/> */}
+        <div className="foreGround">
         <Form
           className="LoginForm"
           noValidate
           validated={validated}
           onSubmit={e => this.handleSubmit(e)}
-          >
-        <Form.Row>
+        >
+          <Form.Row>
             <Form.Group as={Col} md="12" controlId="validationCustomUsername">
               <Form.Label>Username</Form.Label>
               <InputGroup>
                 <Form.Control
                   name="Username"
-                  onChange={this.props.handleInput} 
+                  onChange={this.props.handleInput}
                   type="text"
                   placeholder="Username"
                   aria-describedby="inputGroupPrepend"
@@ -40,8 +44,8 @@ class LoginForm extends Component {
                 />
               </InputGroup>
             </Form.Group>
-        </Form.Row>
-        <Form.Row>
+          </Form.Row>
+          <Form.Row>
             <Form.Group as={Col} md="12" controlId="validationPassword">
               <Form.Label>Password</Form.Label>
               <Form.Control
@@ -52,11 +56,18 @@ class LoginForm extends Component {
                 placeholder="Password"
               />
             </Form.Group>
-        </Form.Row>
-        <input value='Submit' type='submit' onClick={this.props.handleLogIn} />
-          </Form>
-       );
-     }
+          </Form.Row>
+          <input
+            value="Submit"
+            type="submit"
+            className="btn-primary"
+            onClick={this.props.handleLogIn}
+          />
+        </Form>
+        </div>
+      </div>
+    );
+  }
 }
-        
+
 export default LoginForm;
