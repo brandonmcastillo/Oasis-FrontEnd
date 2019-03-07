@@ -7,7 +7,7 @@ export default class UserInfo extends Component {
   render() {
     return (
       <div>
-        <Card className="Profile-Card" style={{ width: '18rem' }}>
+        <Card className="Profile-Card">
           <Image className="Profile-image" src={GA} roundedCircle fluid/>
             <Card.Body>
               <Card.Title className="title">Welcome to your profile!</Card.Title>

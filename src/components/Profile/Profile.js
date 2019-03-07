@@ -3,6 +3,7 @@ import UserProfileList from './UserProfileList'
 import PostList from './PostList'
 import { Container, Row, Col } from 'react-bootstrap';
 import UserModel from '../../models/UserModel'
+import './Profile.css';
 
  class Profile extends Component {
   state = {

@@ -77,13 +77,13 @@ class NavBar extends Component {
             show={this.state.loginModalShow}
             onHide={loginModalClose}
           />
-          <a
+          <p
             href="#"
             className="nav-modal-link"
             onClick={() => this.setState({ modalShow: true })}
           >
             Sign Up
-          </a>
+          </p>
           <SignUpForm
             handleSignUp={this.signUpUser}
             show={this.state.modalShow}
