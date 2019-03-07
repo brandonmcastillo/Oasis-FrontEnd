@@ -8,6 +8,10 @@ class UserModel {
     let request = axios.get(endPoint);
     return request;
   }
+  static getUser(userId) {
+    let request = axios.get(`${endPoint}/${userId}`)
+    return request
+  }
   static signup(user) {
     let request = axios.post(`${endPoint}/signup`, user);
     return request;

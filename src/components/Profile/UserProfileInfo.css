@@ -11,3 +11,7 @@
     width: 60px;
     margin: auto;
 }
+
+.hidden {
+    display: none;
+}
