@@ -67,24 +67,24 @@ class NavBar extends Component {
     if (this.state.isLoggedIn === false) {
       conditionalNav = (
         <div className="special-div">
-          <a
-            href="#"
+          <p
+            // href="#"
             className="nav-modal-link"
             onClick={() => this.setState({ loginModalShow: true })}
           >
             Sign In
-          </a>
+          </p>
           <LoginForm
             show={this.state.loginModalShow}
             onHide={loginModalClose}
           />
-          <a
-            href="#"
+          <p
+            // href="#"
             className="nav-modal-link"
             onClick={() => this.setState({ modalShow: true })}
           >
             Sign Up
-          </a>
+          </p>
           <SignUpForm
             handleSignUp={this.signUpUser}
             show={this.state.modalShow}

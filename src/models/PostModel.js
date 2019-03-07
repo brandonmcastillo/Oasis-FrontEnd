@@ -13,8 +13,8 @@ class PostModel {
     let request = axios.get(`${endPoint}`);
   }
 
-  static userPosts(post) {
-    let request = axios.get(`${endPoint}/user/${post.userId}`);
+  static userPosts(userId) {
+    let request = axios.get(`${endPoint}/user/${userId}`);
     return request;
   }
 
