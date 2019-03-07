@@ -1,0 +1,16 @@
+.create-button {
+    background-color: red;
+    border-radius: 50%;
+    border: red;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    font-size: 2em;
+    margin-left: 550px;
+    margin-top: -70px;
+}
+
+.create-button:hover {
+    background-color: lightcoral;
+    border: lightcoral;
+}

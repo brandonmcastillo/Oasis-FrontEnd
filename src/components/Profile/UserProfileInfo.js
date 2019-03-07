@@ -31,11 +31,13 @@ export default class UserInfo extends Component {
                 </ListGroup>
             <Card.Body>
             <Button
+
               value="Submit"
               type="submit"
               className="btn-info"
               onClick={this.props.updateInfo}
             > Edit </Button>
+
             </Card.Body>
         </Card>
       </div>

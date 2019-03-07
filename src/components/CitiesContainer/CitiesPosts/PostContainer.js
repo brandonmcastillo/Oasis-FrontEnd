@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { Button } from "react-bootstrap";
+import { Button, Container, Row, Col } from "react-bootstrap";
 import CreatePost from './CreatePost'
 import Post from "./Post";
+import './PostContainer.css'
 
 class PostContainer extends Component {
   state = {
@@ -14,12 +15,17 @@ class PostContainer extends Component {
       return <Post post={post.content} key={idx} />;
     });
     return (
+      <Container>
+        <Row>
+          <Col sm={12} md={12}>
       <div>
-        <h1>Posts</h1>
-        <Button onClick={() => this.setState({modalShow: true})}>Create Post</Button>
+        <Button className="create-button" onClick={() => this.setState({modalShow: true})}>+</Button>
         <CreatePost show={this.state.modalShow} onHide={modalClose}/>
-        {posts}
-      </div>
+              {posts}
+            </div>
+            </Col>
+          </Row>
+        </Container>
     );
   }
 }

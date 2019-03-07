@@ -1,4 +1,9 @@
 /* Carousel */
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
 .carousel-inner {
     height: 90vh;
     max-width: 100%;

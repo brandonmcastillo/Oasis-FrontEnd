@@ -58,8 +58,8 @@ class CitiesContainer extends Component {
       <div>
         <Container>
           <Row>
-            <Col sm={4}>{citiesList}</Col>
-            <Col sm={8}>
+            <Col sm={4} md={4}>{citiesList}</Col>
+            <Col sm={8} md={8}>
               <CityPostContainer
                 data={this.state.data}
                 posts={this.state.posts}
