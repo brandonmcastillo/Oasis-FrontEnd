@@ -12,9 +12,10 @@ class NavBar extends Component {
     loginModalShow: false,
     isLoggedIn: false
   };
-  // modalClose = () => {
-  //   this.setState({ modalShow: false })
-  // };
+
+  modalClose = () => {
+    this.setState({ modalShow: false });
+  };
 
   handleNavStateOnChange = e => {
     this.setState({
@@ -34,7 +35,10 @@ class NavBar extends Component {
       .then(res => {
         console.log("success", res);
         alert(res.data.message);
+        console.log(res.data);
         localStorage.token = res.data.signedJwt;
+        localStorage.userId = res.data.user._id;
+        console.log(res.data.user._id);
         this.setState({
           username: res.data.user.username,
           userId: res.data.user._id,
@@ -48,6 +52,27 @@ class NavBar extends Component {
       .catch(err => console.log(err));
   };
 
+  submitUserSignin = () => {
+    let userToLogin = {
+      username: this.state.username,
+      password: this.state.password
+    };
+    console.log("beofre API call to login  ", userToLogin);
+    UserModel.login(userToLogin)
+      .then(res => {
+        console.log(res.data);
+        localStorage.token = res.data.signedJwt;
+        localStorage.userId = res.data.user._id;
+        console.log(localStorage);
+        this.setState({
+          isLoggedIn: true
+        });
+      })
+      .catch(err => {
+        alert(err);
+      });
+  };
+
   logoutUser = e => {
     localStorage.clear();
     this.setState({
@@ -57,39 +82,44 @@ class NavBar extends Component {
       email: "",
       isLoggedIn: false
     });
+    localStorage.clear();
   };
 
   render() {
     let modalClose = () => this.setState({ modalShow: false });
     let loginModalClose = () => this.setState({ loginModalShow: false });
+
     let conditionalNav;
     if (this.state.isLoggedIn === false) {
       conditionalNav = (
         <div className="special-div">
-          <a
-            href="#"
+          <p
             className="nav-modal-link"
             onClick={() => this.setState({ loginModalShow: true })}
           >
             Sign In
-          </a>
+          </p>
           <LoginForm
+            handleSignUp={this.signInUser}
             show={this.state.loginModalShow}
             onHide={loginModalClose}
+            handleNavStateOnChange={this.handleNavStateOnChange}
+            submitUserSignin={this.submitUserSignin}
+            onSubmit={this.submitUserSignin}
           />
-          <a
-            href="#"
+          <p
             className="nav-modal-link"
             onClick={() => this.setState({ modalShow: true })}
           >
             Sign Up
-          </a>
+          </p>
           <SignUpForm
             handleSignUp={this.signUpUser}
             show={this.state.modalShow}
             onHide={modalClose}
             handleNavStateOnChange={this.handleNavStateOnChange}
             submitUserSignup={this.submitUserSignup}
+            onSubmit={this.submitUserSignup}
           />
         </div>
       );
