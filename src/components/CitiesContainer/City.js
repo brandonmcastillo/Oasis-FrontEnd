@@ -14,6 +14,7 @@ class City extends Component {
           <img width={100} height={100} className="mr-3" src={Sf} alt="sf" />
           <Media.Body>
             <h5 id="cityName">{this.props.name}</h5>
+              <img src={this.props.image}/>
             <button onClick={this.passUpState}>View</button>
           </Media.Body>
         </Media>

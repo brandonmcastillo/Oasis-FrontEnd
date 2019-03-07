@@ -10,7 +10,8 @@ class CityPostContainer extends Component {
         <Container>
           <Row>
             <Col md={12}>
-              <CityHeader title={this.props.data.name} />
+              <CityHeader title={this.props.data.name} img={this.props.data.image} />
+              
             </Col>
           </Row>
           <Row>

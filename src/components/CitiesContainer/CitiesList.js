@@ -7,7 +7,7 @@ class CitiesList extends Component {
     let cities = this.props.cities.map(c => {
       console.log(c);
       return (
-        <City fetchOnClick={this.props.fetchOnClick} name={c.name} id={c._id} />
+        <City fetchOnClick={this.props.fetchOnClick} name={c.name}  id={c._id} />
       );
     });
     return <div>{cities}</div>;
