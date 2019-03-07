@@ -3,6 +3,7 @@ import UserProfileList from './UserProfileList'
 import PostList from './PostList'
 import { Container, Row, Col } from 'react-bootstrap';
 import UserModel from '../../models/UserModel'
+import PostModel from '../../models/PostModel'
 
  class Profile extends Component {
   state = {
@@ -10,15 +11,18 @@ import UserModel from '../../models/UserModel'
     email: '',
     city: '',
     dateJoined: '',
-    editInput: 'hidden'
+    editInput: 'hidden',
+    userId: '5c804ce1390c2b0722e64b9a',
+    userPosts: []
   }
   componentDidMount = () => {
     this.fetchUser()
+    this.fetchPosts()
   }
   
   // userId = '5c804ce1390c2b0722e64b9a'
   fetchUser = () => {
-    UserModel.getUser('5c804ce1390c2b0722e64b9a').then(response => {
+    UserModel.getUser(this.state.userId).then(response => {
       console.log(response)
       this.setState({
         username: response.data.username,
@@ -29,13 +33,22 @@ import UserModel from '../../models/UserModel'
     })
   }
 
+  fetchPosts = () => {
+    PostModel.userPosts(this.state.userId).then(response => {
+      console.log(response.data)
+      this.setState({
+        userPosts: response.data
+      })
+    })
+  }
+
   updateInfo = () => {
     this.setState({ editInput: 'show' })
   }
 
 
   saveInfo = (newUserInfo) => {
-    UserModel.update('5c804ce1390c2b0722e64b9a', newUserInfo).then(response => {
+    UserModel.update(this.state.userId, newUserInfo).then(response => {
       this.setState({
         username: response.data.username,
         email:response.data.email,
@@ -64,9 +77,9 @@ import UserModel from '../../models/UserModel'
             <Col xs={12} sm={12} md={8}>
               {/* User Posts */}
               <h2 className="Your-Post">Your Posts</h2>
-              <PostList />
-              <PostList />
-              <PostList />
+              <PostList userPosts={this.state.userPosts}/>
+              {/* <PostList />
+              <PostList /> */}
               </Col>
               </Row>
       </Container>
