@@ -5,32 +5,27 @@ import GA from "./GA.jpg"
 
 export default class UserInfo extends Component {
   state = {
-    user: {
       username: this.props.username,
       email: this.props.email,
       city: this.props.city
-      // userId
-    }
   }
 
   onChange = (e) => {
     this.setState({
-      user: {
-        [e.target.name]: e.target.value
-      }
+      [e.target.name]: e.target.value
     })
   }
 
   onSubmit = (e) => {
     e.preventDefault()
-    let newUserInfo = this.state.user
+    let newUserInfo = this.state
     this.props.saveInfo(newUserInfo)
   }
 
   render() {
     return (
       <div>
-        <Card className="Profile-Card" style={{ width: '18rem' }}>
+        <Card className="Profile-Card">
           <Image className="Profile-image" src={GA} roundedCircle fluid/>
             <Card.Body>
               <Card.Title className="title">Welcome to your profile!</Card.Title>

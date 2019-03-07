@@ -12,7 +12,7 @@ class UserProfileList extends Component {
                     dateJoined={this.props.dateJoined}
                     editInput={this.props.editInput}
                     updateInfo={this.props.updateInfo}
-                    onSubmit={this.props.onSubmit}
+                    // onSubmit={this.props.onSubmit}
                     saveInfo={this.props.saveInfo}/>
             </div>
         );
