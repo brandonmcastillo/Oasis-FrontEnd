@@ -12,7 +12,7 @@ import PostModel from '../../models/PostModel'
     city: '',
     dateJoined: '',
     editInput: 'hidden',
-    userId: '5c804ce1390c2b0722e64b9a',
+    userId: localStorage.getItem('userId'),
     userPosts: []
   }
   componentDidMount = () => {
@@ -87,4 +87,4 @@ import PostModel from '../../models/PostModel'
     )
   }
 }
-export default Profile
+export default Profile;
