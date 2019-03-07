@@ -7,13 +7,14 @@ import Twitter from './twitter.png'
 class Footer extends Component {
   render() {
     return (
+      <div className="footer-div">
       <footer>
-        <ul>
-            <li><a href="https://www.facebook.com"><img src={Facebook} /></a> </li>
-            <li><a href="https://www.instagram.com"><img src={Instagram} /></a> </li>
-            <li><a href="https://www.twitter.com"><img src={Twitter} /></a> </li>
-        </ul>
+        <a href=""><i className="fa fa-facebook-square" aria-hidden="true"></i></a>
+        <a href=""><i className="fa fa-twitter-square" aria-hidden="true"></i></a>
+        <a href=""><i className="fa fa-instagram" aria-hidden="true"></i></a>
+        <p className="copyright">&copy; MKBA 2019</p>
       </footer>
+      </div>
     )
   }
 }

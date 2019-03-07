@@ -1,34 +1,35 @@
-import React, { Component } from 'react';
-import { Form, Col, InputGroup, Modal, Button } from 'react-bootstrap';
-import './Form.css';
+import React, { Component } from "react";
+import { Form, Col, InputGroup, Modal, Button } from "react-bootstrap";
+import "./Form.css";
 class SignUpForm extends Component {
   constructor(...args) {
     super(...args);
 
     this.state = { validated: false };
   }
-
+  //this is just for validate form, not actual api call
   handleSubmit(event) {
+    event.preventDefault();
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
     }
     this.setState({ validated: true });
+    this.props.submitUserSignup();
   }
 
   render() {
     const { validated } = this.state;
     return (
-      <Modal 
-        show={this.props.show} 
+      <Modal
+        show={this.props.show}
         onHide={this.props.onHide}
         aria-labelledby="contained-modal-title-vcenter"
-        centered>
+        centered
+      >
         <Modal.Header>
-          <Modal.Title>
-            Sign up
-          </Modal.Title>
+          <Modal.Title>Sign up</Modal.Title>
         </Modal.Header>
 
         <Modal.Body>
@@ -39,13 +40,6 @@ class SignUpForm extends Component {
             onSubmit={e => this.handleSubmit(e)}
           >
             <Form.Row>
-              <Form.Group as={Col} md="12" controlId="validationCustom01">
-                <Form.Label>Name</Form.Label>
-                <Form.Control required type="text" placeholder="Name" />
-                <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-              </Form.Group>
-            </Form.Row>
-            <Form.Row>
               <Form.Group as={Col} md="12" controlId="validationCustomUsername">
                 <Form.Label>Username</Form.Label>
                 <InputGroup>
@@ -54,7 +48,7 @@ class SignUpForm extends Component {
                   </InputGroup.Prepend>
                   <Form.Control
                     name="username"
-                    onChange={this.props.handleInput}
+                    onChange={this.props.handleNavStateOnChange}
                     type="text"
                     placeholder="Username"
                     aria-describedby="inputGroupPrepend"
@@ -72,7 +66,7 @@ class SignUpForm extends Component {
                 <Form.Control
                   required
                   name="password"
-                  onChange={this.props.handleInput}
+                  onChange={this.props.handleNavStateOnChange}
                   type="password"
                   placeholder="Password"
                 />
@@ -85,7 +79,7 @@ class SignUpForm extends Component {
                 <Form.Control
                   required
                   name="email"
-                  onChange={this.props.handleInput}
+                  onChange={this.props.handleNavStateOnChange}
                   type="text"
                   placeholder="Email"
                 />
@@ -97,7 +91,7 @@ class SignUpForm extends Component {
                 <Form.Label> Favorite City</Form.Label>
                 <Form.Control
                   name="city"
-                  onChange={this.props.handleInput}
+                  onChange={this.props.handleNavStateOnChange}
                   type="text"
                   placeholder="City"
                   required
@@ -121,8 +115,6 @@ class SignUpForm extends Component {
               onClick={this.props.handleSignUp}
             />
           </Form>
-
-
         </Modal.Body>
         <Modal.Footer>
           <Button onClick={this.props.onHide}>Close</Button>
