@@ -9,15 +9,15 @@ class UserModel {
     return request;
   }
   static getUser(userId) {
-    let request = axios.get(`${endPoint}/${userId}`)
-    return request
+    let request = axios.get(`${endPoint}/${userId}`);
+    return request;
   }
   static signup(user) {
     let request = axios.post(`${endPoint}/signup`, user);
     return request;
   }
-  static login() {
-    let request = axios.post(endPoint);
+  static login(user) {
+    let request = axios.post(`${endPoint}/login`, user);
     return request;
   }
   static update(userId, updateInfo) {
