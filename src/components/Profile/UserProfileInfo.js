@@ -22,7 +22,6 @@ export default class UserInfo extends Component {
           value="Submit"
           type="submit"
           className="btn-info"
-          onClick={this.props.updateInfo}
         > Edit </Button>
             </Card.Body>
         </Card>
