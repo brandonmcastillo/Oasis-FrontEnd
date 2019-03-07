@@ -9,9 +9,14 @@ import UserModel from "../../models/UserModel";
 class NavBar extends Component {
   state = {
     modalShow: false,
-    loginModalShow: false,
-    isLoggedIn: false
+    loginModalShow: false
   };
+
+  componentDidMount() {
+    if (localStorage.isLoggedIn === undefined) {
+      localStorage.isLoggedIn = false;
+    }
+  }
 
   modalClose = () => {
     this.setState({ modalShow: false });
@@ -38,17 +43,17 @@ class NavBar extends Component {
         console.log(res.data);
         localStorage.token = res.data.signedJwt;
         localStorage.userId = res.data.user._id;
+        localStorage.isLoggedIn = true;
         console.log(res.data.user._id);
         this.setState({
           username: res.data.user.username,
           userId: res.data.user._id,
           password: "",
-          email: res.data.user.email,
-          isLoggedIn: true
+          email: res.data.user.email
+          // isLoggedIn: true
         });
         //how do we redirect in react without
         // window.location.href = "/profile";
-        
       })
       .catch(err => console.log(err));
   };
@@ -64,10 +69,11 @@ class NavBar extends Component {
         console.log(res.data);
         localStorage.token = res.data.signedJwt;
         localStorage.userId = res.data.user._id;
+        localStorage.isLoggedIn = true;
         console.log(localStorage);
-        this.setState({
-          isLoggedIn: true
-        });
+        // this.setState({
+        //   isLoggedIn: true
+        // });
       })
       .catch(err => {
         alert(err);
@@ -80,8 +86,8 @@ class NavBar extends Component {
       username: "",
       userId: "",
       password: "",
-      email: "",
-      isLoggedIn: false
+      email: ""
+      // isLoggedIn: false
     });
     localStorage.clear();
   };
@@ -91,11 +97,14 @@ class NavBar extends Component {
     let loginModalClose = () => this.setState({ loginModalShow: false });
 
     let conditionalNav;
-    if (this.state.isLoggedIn === false) {
+    console.log(localStorage);
+    if (
+      localStorage.isLoggedIn == "false" ||
+      localStorage.isLoggedIn == undefined
+    ) {
       conditionalNav = (
         <div className="special-div">
           <p
-
             className="nav-modal-link"
             onClick={() => this.setState({ loginModalShow: true })}
           >
@@ -110,7 +119,6 @@ class NavBar extends Component {
             onSubmit={this.submitUserSignin}
           />
           <p
-
             className="nav-modal-link"
             onClick={() => this.setState({ modalShow: true })}
           >

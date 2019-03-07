@@ -62,7 +62,7 @@ class LoginForm extends Component {
                   required
                   name="password"
                   onChange={this.props.handleNavStateOnChange}
-                  type="text"
+                  type="password"
                   placeholder="Password"
                 />
               </Form.Group>
