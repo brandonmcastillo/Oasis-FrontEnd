@@ -24,16 +24,25 @@ import UserModel from '../../models/UserModel'
         username: response.data.username,
         email: response.data.email,
         city: response.data.city,
-        dateJoined: response.data.dateJoined
+        dateJoined: new Date(response.data.dateJoined).toDateString()
       })
     })
   }
 
   updateInfo = () => {
-    // if (this.state.editInput === 'show') {
-    //   this.setState({ editInput: 'hidden' })
-    // }
     this.setState({ editInput: 'show' })
+  }
+
+
+  saveInfo = (newUserInfo) => {
+    UserModel.update('5c804ce1390c2b0722e64b9a', newUserInfo).then(response => {
+      this.setState({
+        username: response.data.username,
+        email:response.data.email,
+        city: response.data.city,
+        editInput: 'hidden'
+      })
+    })
   }
 
   render() {
@@ -48,7 +57,9 @@ import UserModel from '../../models/UserModel'
                 city={this.state.city}
                 dateJoined={this.state.dateJoined}
                 editInput={this.state.editInput}
-                updateInfo={this.updateInfo}/>
+                updateInfo={this.updateInfo}
+                onSubmit={this.onSubmit}
+                saveInfo={this.saveInfo}/>
             </Col>
             <Col xs={12} sm={12} md={8}>
               {/* User Posts */}
