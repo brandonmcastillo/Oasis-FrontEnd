@@ -20,8 +20,8 @@ class UserModel {
     let request = axios.post(`${endPoint}/login`, user);
     return request;
   }
-  static update(user, updateInfo) {
-    let request = axios.put(`${endPoint}/${user._id}`, updateInfo);
+  static update(userId, updateInfo) {
+    let request = axios.put(`${endPoint}/${userId}`, updateInfo);
     return request;
   }
   static delete(user) {

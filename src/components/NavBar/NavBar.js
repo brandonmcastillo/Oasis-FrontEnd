@@ -48,6 +48,7 @@ class NavBar extends Component {
         });
         //how do we redirect in react without
         // window.location.href = "/profile";
+        
       })
       .catch(err => console.log(err));
   };
@@ -94,6 +95,7 @@ class NavBar extends Component {
       conditionalNav = (
         <div className="special-div">
           <p
+
             className="nav-modal-link"
             onClick={() => this.setState({ loginModalShow: true })}
           >
@@ -108,6 +110,7 @@ class NavBar extends Component {
             onSubmit={this.submitUserSignin}
           />
           <p
+
             className="nav-modal-link"
             onClick={() => this.setState({ modalShow: true })}
           >
@@ -149,7 +152,7 @@ class NavBar extends Component {
                 placeholder="Search"
                 className="mr-sm-2"
               />
-              <Button variant="outline-info">Search</Button>
+              <Button variant="outline-light">Search</Button>
             </Form>
           </Navbar.Collapse>
         </Navbar>

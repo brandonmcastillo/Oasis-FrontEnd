@@ -4,29 +4,55 @@ import './UserProfileInfo.css'
 import GA from "./GA.jpg"
 
 export default class UserInfo extends Component {
+  state = {
+      username: this.props.username,
+      email: this.props.email,
+      city: this.props.city
+  }
+
+  onChange = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
+
+  onSubmit = (e) => {
+    e.preventDefault()
+    let newUserInfo = this.state
+    this.props.saveInfo(newUserInfo)
+  }
+
   render() {
     return (
       <div>
-        <Card className="Profile-Card" style={{ width: '18rem' }}>
+        <Card className="Profile-Card">
           <Image className="Profile-image" src={GA} roundedCircle fluid/>
             <Card.Body>
               <Card.Title className="title">Welcome to your profile!</Card.Title>
                 </Card.Body>
                   <ListGroup className="list-group-flush">
-                    <form>
+                    <form onSubmit={this.onSubmit}>
                       {/* Will Change to Current User */}
                       <ListGroupItem>Name: {this.props.username}
-                        <span className={this.props.editInput}><input type="text" name="username" placeholder={this.props.username}></input></span>
+                        <span className={this.props.editInput}><input type="text" name="username" placeholder={this.props.username} onChange={this.onChange}></input></span>
                       </ListGroupItem>
                       
                       <ListGroupItem>Email: {this.props.email}
-                        <span className={this.props.editInput}><input type="text" name="email" placeholder={this.props.email}></input></span>
+                        <span className={this.props.editInput}><input type="text" name="email" placeholder={this.props.email} onChange={this.onChange}></input></span>
                       </ListGroupItem>
                       <ListGroupItem>City: {this.props.city}
-                        <span className={this.props.editInput}><input type="text" name="city" placeholder={this.props.city}></input></span>
+                        <span className={this.props.editInput}><input type="text" name="city" placeholder={this.props.city} onChange={this.onChange}></input></span>
                       </ListGroupItem>
                       <ListGroupItem>Date Joined: {this.props.dateJoined}</ListGroupItem>
-                      <span className={this.props.editInput}><input type="submit" />Save</span>
+                      <span className={this.props.editInput}>
+                      <Button
+                        value="Submit"
+                        type="submit"
+                        className={this.props.editInput}
+                        // onClick={this.props.saveInfo}
+                        > Save
+                      </Button>
+                      </span>
                   </form>
                 </ListGroup>
             <Card.Body>

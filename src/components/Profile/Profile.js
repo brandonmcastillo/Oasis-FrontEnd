@@ -3,6 +3,7 @@ import UserProfileList from './UserProfileList'
 import PostList from './PostList'
 import { Container, Row, Col } from 'react-bootstrap';
 import UserModel from '../../models/UserModel'
+import PostModel from '../../models/PostModel'
 
  class Profile extends Component {
   state = {
@@ -10,30 +11,51 @@ import UserModel from '../../models/UserModel'
     email: '',
     city: '',
     dateJoined: '',
-    editInput: 'hidden'
+    editInput: 'hidden',
+    userId: '5c804ce1390c2b0722e64b9a',
+    userPosts: []
   }
   componentDidMount = () => {
     this.fetchUser()
+    this.fetchPosts()
   }
   
   // userId = '5c804ce1390c2b0722e64b9a'
   fetchUser = () => {
-    UserModel.getUser('5c804ce1390c2b0722e64b9a').then(response => {
+    UserModel.getUser(this.state.userId).then(response => {
       console.log(response)
       this.setState({
         username: response.data.username,
         email: response.data.email,
         city: response.data.city,
-        dateJoined: response.data.dateJoined
+        dateJoined: new Date(response.data.dateJoined).toDateString()
+      })
+    })
+  }
+
+  fetchPosts = () => {
+    PostModel.userPosts(this.state.userId).then(response => {
+      console.log(response.data)
+      this.setState({
+        userPosts: response.data
       })
     })
   }
 
   updateInfo = () => {
-    // if (this.state.editInput === 'show') {
-    //   this.setState({ editInput: 'hidden' })
-    // }
     this.setState({ editInput: 'show' })
+  }
+
+
+  saveInfo = (newUserInfo) => {
+    UserModel.update(this.state.userId, newUserInfo).then(response => {
+      this.setState({
+        username: response.data.username,
+        email:response.data.email,
+        city: response.data.city,
+        editInput: 'hidden'
+      })
+    })
   }
 
   render() {
@@ -48,14 +70,16 @@ import UserModel from '../../models/UserModel'
                 city={this.state.city}
                 dateJoined={this.state.dateJoined}
                 editInput={this.state.editInput}
-                updateInfo={this.updateInfo}/>
+                updateInfo={this.updateInfo}
+                onSubmit={this.onSubmit}
+                saveInfo={this.saveInfo}/>
             </Col>
             <Col xs={12} sm={12} md={8}>
               {/* User Posts */}
               <h2 className="Your-Post">Your Posts</h2>
-              <PostList />
-              <PostList />
-              <PostList />
+              <PostList userPosts={this.state.userPosts}/>
+              {/* <PostList />
+              <PostList /> */}
               </Col>
               </Row>
       </Container>
@@ -63,4 +87,4 @@ import UserModel from '../../models/UserModel'
     )
   }
 }
-export default Profile;
+export default Profile

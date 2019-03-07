@@ -1,16 +1,18 @@
 .create-button {
-    background-color: red;
-    border-radius: 50%;
-    border: red;
+    background-color: transparent;
+    border-radius: none;
+    border: transparent;
     width: 80px;
     height: 80px;
     text-align: center;
-    font-size: 2em;
+    font-size: 3em;
     margin-left: 550px;
-    margin-top: -70px;
+    margin-top: -100px;
 }
 
-.create-button:hover {
-    background-color: lightcoral;
-    border: lightcoral;
+.create-button:hover, .create-button:active {
+    background-color: transparent;
+    border: transparent;
+    border-radius: none;
 }
+
