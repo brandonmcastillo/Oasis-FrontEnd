@@ -4,7 +4,8 @@ h2 {
 }
 
 nav {
-  background-color: #393e46;
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
   color: white;
 }
 
