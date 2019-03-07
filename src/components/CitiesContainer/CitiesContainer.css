@@ -1,3 +1,13 @@
 body {
     padding-top: 80px;
 }
+
+.pick-city {
+    padding-top: 30px;
+    border-bottom: 1px  inset grey;
+}
+
+div.cities-list.media-body {
+    background-color:rgba(89, 89, 89, 0.67);
+    border: 1px solid grey;
+}

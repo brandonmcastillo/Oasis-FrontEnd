@@ -44,6 +44,7 @@ class NavBar extends Component {
         });
         //how do we redirect in react without
         // window.location.href = "/profile";
+        
       })
       .catch(err => console.log(err));
   };
@@ -119,7 +120,7 @@ class NavBar extends Component {
                 placeholder="Search"
                 className="mr-sm-2"
               />
-              <Button variant="outline-info">Search</Button>
+              <Button variant="outline-light">Search</Button>
             </Form>
           </Navbar.Collapse>
         </Navbar>

@@ -30,10 +30,10 @@ import UserModel from '../../models/UserModel'
   }
 
   updateInfo = () => {
-    // if (this.state.editInput === 'show') {
-    //   this.setState({ editInput: 'hidden' })
-    // }
-    this.setState({ editInput: 'show' })
+    if (this.state.editInput === 'show') {
+      // this.setState({ editInput: 'hidden' })
+    }
+    // this.setState({ editInput: 'show' })
   }
 
   render() {
