@@ -1,6 +1,8 @@
-import CreatePost from '../Forms/CreatePost';
 
+import CreatePost from '../Forms/CreatePost';
 import React, { Component } from 'react';
+import CreatePost from '../CitiesContainer/CitiesPosts/CreatePost'
+import './CreateUserPost.css'
 import { Button } from 'react-bootstrap';
 import PostModel from '../../models/PostModel';
 
@@ -34,6 +36,10 @@ class CreateUserPost extends Component {
           onHide={this.modalClose}
           onClick={() => this.setState({ modalShow: true })}
         />
+        <div>
+          <Button className="create-user-post" onClick={() => this.setState({modalShow: true})}>+</Button>
+          <CreatePost show={this.state.modalShow} onHide={modalClose}/>
+        
       </div>
     );
   }

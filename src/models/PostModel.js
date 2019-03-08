@@ -9,8 +9,8 @@ class PostModel {
     return request;
   }
 
-  static onePost(post) {
-    let request = axios.get(`${endPoint}`);
+  static onePost(postId) {
+    let request = axios.get(`${endPoint}/${postId}`);
     return request;
   }
 
@@ -40,8 +40,8 @@ class PostModel {
     return request;
   }
   // delete a post
-  static delete(post) {
-    let request = axios.delete(`${endPoint}/${post._id}`);
+  static delete(postId) {
+    let request = axios.delete(`${endPoint}/${postId}`);
     return request;
   }
 }

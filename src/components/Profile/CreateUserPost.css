@@ -1,0 +1,28 @@
+.create-user-post {
+    background-color: transparent;
+    border-radius: none;
+    border: transparent;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    font-size: 4em;
+    margin-left: 550px;
+    margin-top: -120px;
+    color: white;
+    box-shadow:none;
+}
+
+.create-user-post:hover, .create-user-post:focus, .create-user-post:active {
+    background-color: transparent;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
+.PostDiv {
+    background-color: rgba(32, 32, 32, 0.945);
+    border-top: 1px solid cyan;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}

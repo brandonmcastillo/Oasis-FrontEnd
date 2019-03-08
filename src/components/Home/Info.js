@@ -5,6 +5,11 @@ class Info extends Component {
   render() {
     return (
       <div>
+        <Container>
+          <h3>What is Wayfarer?</h3>
+          <p>Wayfarer is a travel community where you can post and see what others are saying about their favorite locations around the world. Get insights from locals or experienced travelers about the best places to eat, shop, or sight see. Whether you are traveling someplace new or returning to a favorite destination, Wayfarer is here for you to post, share, and learn.</p>
+          <p>To begin using Wayfarer, sign up for a free account and browse the cities list.</p>
+        </Container>
         <Container className="info-section">
           <Row>
             <h3>What do our favorite customers think about Wayfarer?</h3>
