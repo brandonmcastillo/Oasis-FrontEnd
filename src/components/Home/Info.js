@@ -6,7 +6,7 @@ class Info extends Component {
     return (
       <div>
         <Container>
-          <h3>What is Wayfarer?</h3>
+          <h3>Our Mission</h3>
           <p>Wayfarer is a travel community where you can post and see what others are saying about their favorite locations around the world. Get insights from locals or experienced travelers about the best places to eat, shop, or sight see. Whether you are traveling someplace new or returning to a favorite destination, Wayfarer is here for you to post, share, and learn.</p>
           <p>To begin using Wayfarer, sign up for a free account and browse the cities list.</p>
         </Container>
@@ -18,12 +18,12 @@ class Info extends Component {
             <Col sm={12} md={4}>
               <Card className="Card" style={{ width: '18rem' }}>
                 <Card.Body>
-                  <Card.Title>Amberly Wang</Card.Title>
+                  <Card.Title>Marcus Delgado</Card.Title>
                   <Card.Subtitle className="mb-2 text-muted">
-                    <h6>San Jose, CA</h6>
+                    <h6>Modesto, California</h6>
                   </Card.Subtitle>
                   <Card.Text>
-                    "Outstanding. I don't know what I'd do without it. I like to
+                    "Outstanding. I don't know what I'd do without it. I love to
                     use this on the go."
                   </Card.Text>
                 </Card.Body>
@@ -32,9 +32,9 @@ class Info extends Component {
             <Col sm={12} md={4}>
               <Card className="Card" style={{ width: '18rem' }}>
                 <Card.Body>
-                  <Card.Title>Brandon Castillo</Card.Title>
+                  <Card.Title>Jack Ellingwood</Card.Title>
                   <Card.Subtitle className="mb-2 text-muted">
-                  <h6>Vallejo, CA</h6>
+                  <h6>Melbourne, Australia</h6>
                   </Card.Subtitle>
                   <Card.Text>
                     "I've used this for my travels and it has helped me more
@@ -46,9 +46,9 @@ class Info extends Component {
             <Col sm={12} md={4}>
               <Card className="Card" style={{ width: '18rem' }}>
                 <Card.Body>
-                  <Card.Title>Michael Claus</Card.Title>
+                  <Card.Title>Brock Whitbread-Cole</Card.Title>
                   <Card.Subtitle className="mb-2 text-muted">
-                    <h6>San Francisco, CA</h6>
+                    <h6>Toronto, Ontario, Canada</h6>
                   </Card.Subtitle>
                   <Card.Text>
                     "This application changed my life! I discovered it in 2019.
