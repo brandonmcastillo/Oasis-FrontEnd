@@ -44,8 +44,8 @@ class CityCarousel extends Component {
             <Carousel.Item><img className="picture d-block w-100" src={Sanfrancisco} alt="Second slide" />
               <Carousel.Caption>
                 <div id="header">
-                  <h1 className="real">SF BAY AREA</h1>
-                  <h1 className="refl">SF BAY AREA</h1>
+                  <h1 className="real">BAY AREA</h1>
+                  <h1 className="refl">BAY AREA</h1>
               </div>  
               </Carousel.Caption>
              </Carousel.Item>

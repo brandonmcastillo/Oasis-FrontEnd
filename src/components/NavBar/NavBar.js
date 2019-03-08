@@ -64,7 +64,7 @@ class NavBar extends Component {
             // isLoggedIn: true
           });
           //how do we redirect in react without
-          // window.location.href = "/profile";
+          window.location.href = "/profile";
         })
         .catch(err => console.log(err));
     }
@@ -92,6 +92,7 @@ class NavBar extends Component {
           // this.setState({
           //   isLoggedIn: true
           // });
+          window.location.href = "/profile";
         })
         .catch(err => {
           alert(err);
@@ -179,7 +180,7 @@ class NavBar extends Component {
                 placeholder="Search"
                 className="mr-sm-2"
               />
-              <Button variant="outline-light">Search</Button>
+              <Button variant="outline-info">Search</Button>
             </Form>
           </Navbar.Collapse>
         </Navbar>

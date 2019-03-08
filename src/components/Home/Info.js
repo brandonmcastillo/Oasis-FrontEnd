@@ -5,7 +5,7 @@ class Info extends Component {
   render() {
     return (
       <div>
-        <Container >
+        <Container className="info-section">
           <Row>
             <h3>What do our favorite customers think about Wayfarer?</h3>
           </Row>
