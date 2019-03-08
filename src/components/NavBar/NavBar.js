@@ -29,55 +29,74 @@ class NavBar extends Component {
   };
 
   submitUserSignup = () => {
-    let newUser = {
-      username: this.state.username,
-      password: this.state.password,
-      email: this.state.email,
-      city: this.state.city
-    };
-    console.log("before api POST to make new user, the user obj is ", newUser);
-    UserModel.signup(newUser)
-      .then(res => {
-        console.log("success", res);
-        alert(res.data.message);
-        console.log(res.data);
-        localStorage.token = res.data.signedJwt;
-        localStorage.userId = res.data.user._id;
-        localStorage.isLoggedIn = true;
-        console.log(res.data.user._id);
-        this.setState({
-          username: res.data.user.username,
-          userId: res.data.user._id,
-          password: "",
-          email: res.data.user.email
-          // isLoggedIn: true
-        });
-        //how do we redirect in react without
-        // window.location.href = "/profile";
-      })
-      .catch(err => console.log(err));
+    if (
+      this.state.username === undefined ||
+      this.state.password === undefined ||
+      this.state.email === undefined ||
+      this.state.city === undefined
+    ) {
+      return;
+    } else {
+      let newUser = {
+        username: this.state.username,
+        password: this.state.password,
+        email: this.state.email,
+        city: this.state.city
+      };
+      console.log(
+        "before api POST to make new user, the user obj is ",
+        newUser
+      );
+      UserModel.signup(newUser)
+        .then(res => {
+          console.log("success", res);
+          alert(res.data.message);
+          console.log(res.data);
+          localStorage.token = res.data.signedJwt;
+          localStorage.userId = res.data.user._id;
+          localStorage.isLoggedIn = true;
+          console.log(res.data.user._id);
+          this.setState({
+            username: res.data.user.username,
+            userId: res.data.user._id,
+            password: "",
+            email: res.data.user.email
+            // isLoggedIn: true
+          });
+          //how do we redirect in react without
+          // window.location.href = "/profile";
+        })
+        .catch(err => console.log(err));
+    }
   };
 
   submitUserSignin = () => {
-    let userToLogin = {
-      username: this.state.username,
-      password: this.state.password
-    };
-    console.log("beofre API call to login  ", userToLogin);
-    UserModel.login(userToLogin)
-      .then(res => {
-        console.log(res.data);
-        localStorage.token = res.data.signedJwt;
-        localStorage.userId = res.data.user._id;
-        localStorage.isLoggedIn = true;
-        console.log(localStorage);
-        // this.setState({
-        //   isLoggedIn: true
-        // });
-      })
-      .catch(err => {
-        alert(err);
-      });
+    if (
+      this.state.username === undefined ||
+      this.state.password === undefined
+    ) {
+      return;
+    } else {
+      let userToLogin = {
+        username: this.state.username,
+        password: this.state.password
+      };
+      console.log("beofre API call to login  ", userToLogin);
+      UserModel.login(userToLogin)
+        .then(res => {
+          console.log(res.data);
+          localStorage.token = res.data.signedJwt;
+          localStorage.userId = res.data.user._id;
+          localStorage.isLoggedIn = true;
+          console.log(localStorage);
+          // this.setState({
+          //   isLoggedIn: true
+          // });
+        })
+        .catch(err => {
+          alert(err);
+        });
+    }
   };
 
   logoutUser = e => {
