@@ -4,7 +4,12 @@ import './Post.css'
 class PostList extends Component {
     render() {
         let userPosts=this.props.userPosts.map( (post) => {
-            return <Post key={post._id} title={post.title} content={post.content}/>
+            return <Post 
+                    key={post._id} 
+                    postId={post._id} 
+                    title={post.title} 
+                    content={post.content}
+                    deletePost={this.props.deletePost}/>
         })
         return (
             <div>
