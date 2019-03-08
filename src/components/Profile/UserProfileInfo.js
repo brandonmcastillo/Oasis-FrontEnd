@@ -58,7 +58,7 @@ export default class UserInfo extends Component {
                 Email: <span className={this.props.editMode}>{this.props.email}</span>
                 <span className={this.props.editInput}>
                   <input
-                    type="text"
+                    type="email"
                     name="email"
                     placeholder={this.props.email}
                     onChange={this.onChange}
@@ -81,31 +81,31 @@ export default class UserInfo extends Component {
               <ListGroupItem>
                 Date Joined: {this.props.dateJoined}
               </ListGroupItem>
-              <span className={this.props.editInput}>
+              <Card.Body className={this.props.editInput}>
                 <Button
                   value="Submit"
                   type="submit"
-                  className={`btn-info ${this.props.editInput}`}
+                  className={`btn-info edit-button ${this.props.editInput}`}
                 >
                   {" "}
                   Save
                 </Button>
                 <Button
                   value="Submit"
-                  className={`btn-info ${this.props.editInput}`}
+                  className={`btn-info edit-button ${this.props.editInput}`}
                   onClick={this.props.hideUpdate}
                 >
                   {" "}
                   Cancel
                 </Button>
-              </span>
+              </Card.Body>
             </form>
           </ListGroup>
-          <Card.Body>
+          <Card.Body className={this.props.editMode}>
             <Button
               value="Submit"
               type="submit"
-              className={`btn-info ${this.props.editMode}`}
+              className={`btn-info`}
               onClick={this.props.updateInfo}
             >
               {" "}

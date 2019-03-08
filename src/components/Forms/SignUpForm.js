@@ -80,7 +80,7 @@ class SignUpForm extends Component {
                   required
                   name="email"
                   onChange={this.props.handleNavStateOnChange}
-                  type="text"
+                  type="email"
                   placeholder="Email"
                 />
                 <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
@@ -101,13 +101,7 @@ class SignUpForm extends Component {
                 </Form.Control.Feedback>
               </Form.Group>
             </Form.Row>
-            <Form.Group>
-              <Form.Check
-                required
-                label="Agree to terms and conditions"
-                feedback="You must agree before submitting."
-              />
-            </Form.Group>
+            
             <input
               value="Submit"
               type="submit"

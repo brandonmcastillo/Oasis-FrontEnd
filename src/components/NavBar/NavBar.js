@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Navbar, Form, FormControl, Button, Nav } from "react-bootstrap";
+import { Navbar, Form, FormControl, Button, Container, Nav } from "react-bootstrap";
 import "./NavBar.css";
 import SignUpForm from "../Forms/SignUpForm";
 import LoginForm from "../Forms/LoginForm";
@@ -167,6 +167,7 @@ class NavBar extends Component {
     }
     return (
       <div>
+        <Container>
         <Navbar className="Nav" expand="lg" fixed="top">
           <Navbar.Brand href="/">
             <h2>Wayfarer</h2>
@@ -184,6 +185,7 @@ class NavBar extends Component {
             </Form>
           </Navbar.Collapse>
         </Navbar>
+        </Container>
       </div>
     );
   }
