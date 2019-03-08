@@ -14,8 +14,7 @@ import './Profile.css'
     dateJoined: '',
     editInput: 'hidden',
     editMode: 'show',
-    // userId: localStorage.getItem('userId'),
-    userId: '5c804ce1390c2b0722e64b9a',
+    userId: localStorage.getItem('userId'),
     userPosts: []
   }
   componentDidMount = () => {
@@ -23,7 +22,6 @@ import './Profile.css'
     this.fetchPosts()
   }
   
-  // userId = '5c804ce1390c2b0722e64b9a'
   fetchUser = () => {
     UserModel.getUser(this.state.userId).then(response => {
       this.setState({
