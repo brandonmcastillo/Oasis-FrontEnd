@@ -1,20 +1,30 @@
 import React, { Component } from 'react'
 import './Footer.css'
-import Facebook from './facebook.png'
-import Instagram from './instagram.png'
-import Twitter from './twitter.png'
-
+import amberly from './amberly.png'
+import brandon from './brandon.png'
+import karma from './karma.png'
+import michael from './michael.png'
+import {Container, Row, Col} from 'react-bootstrap'
 class Footer extends Component {
   render() {
     return (
-      <div className="footer-div">
       <footer>
-        <a href=""><i className="fa fa-facebook-square" aria-hidden="true"></i></a>
-        <a href=""><i className="fa fa-twitter-square" aria-hidden="true"></i></a>
-        <a href=""><i className="fa fa-instagram" aria-hidden="true"></i></a>
-        <p className="copyright">&copy; MKBA 2019</p>
-      </footer>
-      </div>
+        <Container className="footer-contain">
+          <Row>
+            <Col sm={12} md={3}> 
+              <div>
+                <p class="footer-text">Project <span className="titleName">Wayfarer</span> is created by Amberly Wang, Brandon Castillo, Karma Drukpa and Michael Claus. Showcasing the MERN Stack  ☺ </p>
+            </div>  
+            </Col>
+            <Col sm={12} md={9}>
+         <a href="https://github.com/awang617"  aria-hidden="true"><img className="git-icon" src={amberly}/></a>
+          <a href="https://github.com/brandonmcastillo" aria-hidden="true"><img className="git-icon" src={brandon}/></a>
+          <a href="https://github.com/coderkarma" aria-hidden="true"><img className="git-icon" src={karma}/></a>
+          <a href="https://github.com/mclausaudio" aria-hidden="true"><img className="git-icon" src={michael} /></a>
+              </Col>
+            </Row>
+          </Container>
+        </footer>
     )
   }
 }
