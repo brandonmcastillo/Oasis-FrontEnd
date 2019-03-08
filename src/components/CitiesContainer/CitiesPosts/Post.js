@@ -2,7 +2,14 @@ import React, { Component } from 'react';
 
 class Post extends Component {
   render() {
-    return <div className="PostDiv">{this.props.post}</div>;
+    return (
+      <div className="PostDiv">
+        <p>
+          {this.props.post.title} created by: {this.props.post.userId.username}
+        </p>
+        <p>Tip: {this.props.post.content}</p>
+      </div>
+    );
   }
 }
 export default Post;

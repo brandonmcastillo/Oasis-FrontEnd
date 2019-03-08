@@ -119,8 +119,8 @@ class NavBar extends Component {
     let conditionalNav;
     console.log(localStorage);
     if (
-      localStorage.isLoggedIn == "false" ||
-      localStorage.isLoggedIn == undefined
+      localStorage.isLoggedIn === "false" ||
+      localStorage.isLoggedIn === undefined
     ) {
       conditionalNav = (
         <div className="special-div">
