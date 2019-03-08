@@ -18,6 +18,13 @@ export default class UserInfo extends Component {
 
   onSubmit = e => {
     e.preventDefault();
+    if (
+      this.state.username === undefined 
+      || this.state.email === undefined
+      || this.state.city === undefined
+    ) {
+      return
+    }
     let newUserInfo = this.state;
     this.props.saveInfo(newUserInfo);
   };
@@ -39,8 +46,9 @@ export default class UserInfo extends Component {
                   <input
                     type="text"
                     name="username"
-                    value={this.props.username}
+                    placeholder={this.props.username}
                     onChange={this.onChange}
+                    required
                   />
                 </span>
               </ListGroupItem>
@@ -51,8 +59,9 @@ export default class UserInfo extends Component {
                   <input
                     type="text"
                     name="email"
-                    value={this.props.email}
+                    placeholder={this.props.email}
                     onChange={this.onChange}
+                    required
                   />
                 </span>
               </ListGroupItem>
@@ -62,8 +71,9 @@ export default class UserInfo extends Component {
                   <input
                     type="text"
                     name="city"
-                    value={this.props.city}
+                    placeholder={this.props.city}
                     onChange={this.onChange}
+                    required
                   />
                 </span>
               </ListGroupItem>
