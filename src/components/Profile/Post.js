@@ -19,6 +19,7 @@ export default class Post extends Component {
               />
             </Col>
             <Col xs={8} sm={8} md={8}>
+          
 
               <h3>{this.props.title}</h3>
               <p>{this.props.content}</p>
