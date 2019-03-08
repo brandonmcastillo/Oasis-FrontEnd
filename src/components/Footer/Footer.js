@@ -13,7 +13,7 @@ class Footer extends Component {
           <Row>
             <Col xs={6} sm={6} md={4}> 
               <div>
-                <p class="footer-text">Project <span className="titleName">Wayfarer</span> is created by Amberly Wang, Brandon Castillo, Karma Drukpa and Michael Claus. Showcasing the MERN Stack. </p>
+                <p className="footer-text">Project <span className="titleName">Wayfarer</span> is created by Amberly Wang, Brandon Castillo, Karma Drukpa and Michael Claus. Showcasing the MERN Stack. </p>
             </div>  
             </Col>
             <Col xs={6} sm={6} md={8}>
