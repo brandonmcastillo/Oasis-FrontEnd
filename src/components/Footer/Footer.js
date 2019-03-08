@@ -11,12 +11,12 @@ class Footer extends Component {
       <footer>
         <Container className="footer-contain">
           <Row>
-            <Col sm={12} md={3}> 
+            <Col xs={6} sm={6} md={4}> 
               <div>
-                <p class="footer-text">Project <span className="titleName">Wayfarer</span> is created by Amberly Wang, Brandon Castillo, Karma Drukpa and Michael Claus. Showcasing the MERN Stack  ☺ </p>
+                <p class="footer-text">Project <span className="titleName">Wayfarer</span> is created by Amberly Wang, Brandon Castillo, Karma Drukpa and Michael Claus. Showcasing the MERN Stack. </p>
             </div>  
             </Col>
-            <Col sm={12} md={9}>
+            <Col xs={6} sm={6} md={8}>
          <a href="https://github.com/awang617"  aria-hidden="true"><img className="git-icon" src={amberly}/></a>
           <a href="https://github.com/brandonmcastillo" aria-hidden="true"><img className="git-icon" src={brandon}/></a>
           <a href="https://github.com/coderkarma" aria-hidden="true"><img className="git-icon" src={karma}/></a>
