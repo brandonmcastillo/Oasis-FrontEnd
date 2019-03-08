@@ -18,9 +18,9 @@ class PostContainer extends Component {
       <Container>
         <Row>
           <Col sm={12} md={12}>
-      <div>
-        <Button className="create-button" onClick={() => this.setState({modalShow: true})}>+</Button>
+          <Button className="create-button" onClick={() => this.setState({modalShow: true})}>+</Button>
         <CreatePost show={this.state.modalShow} onHide={modalClose}/>
+      <div>
               {posts}
             </div>
             </Col>

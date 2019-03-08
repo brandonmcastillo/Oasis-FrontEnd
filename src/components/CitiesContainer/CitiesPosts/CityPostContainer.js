@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import CityHeader from "./CityHeader";
 import PostContainer from "./PostContainer";
-import {Container, Row, Col} from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
+import './CityPostContainer.css'
 class CityPostContainer extends Component {
   
   render() {
@@ -16,7 +17,7 @@ class CityPostContainer extends Component {
           </Row>
           <Row>
             <Col md={12}>
-              <h1>Recent Posts</h1>
+              <h1 className="RecentPost">Recent Posts</h1>
               </Col>
           </Row>
           <Row>

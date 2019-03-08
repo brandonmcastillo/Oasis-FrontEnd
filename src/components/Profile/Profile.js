@@ -5,6 +5,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import UserModel from '../../models/UserModel'
 import PostModel from '../../models/PostModel'
 import CreateUserPost from './CreateUserPost'
+import './Profile.css'
  class Profile extends Component {
   state = {
     username: '',
@@ -61,7 +62,7 @@ import CreateUserPost from './CreateUserPost'
   render() {
     return (
       <div>
-      <Container fluid={true}>
+      <Container className="container-profile" fluid={true}>
         <Row noGutters={false}>
             <Col xs={12} sm={12} md={4}>
               <UserProfileList 
