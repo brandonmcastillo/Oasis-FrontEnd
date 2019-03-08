@@ -8,7 +8,7 @@ export default class DeleteModal extends Component {
         <Modal 
             className="delete-modal"
             show={this.props.deleteModalShow} 
-            onHide={this.handleClose}
+            onHide={this.props.handleClose}
             aria-labelledby="contained-modal-title-vcenter"
             centered>
           <Modal.Header>
