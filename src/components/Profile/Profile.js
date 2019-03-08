@@ -4,7 +4,7 @@ import PostList from './PostList'
 import { Container, Row, Col } from 'react-bootstrap';
 import UserModel from '../../models/UserModel'
 import PostModel from '../../models/PostModel'
-
+import CreateUserPost from './CreateUserPost'
  class Profile extends Component {
   state = {
     username: '',
@@ -76,6 +76,7 @@ import PostModel from '../../models/PostModel'
             </Col>
             <Col xs={12} sm={12} md={8}>
               {/* User Posts */}
+              <CreateUserPost/>
               <h2 className="Your-Post">Your Posts</h2>
               <PostList userPosts={this.state.userPosts}/>
               {/* <PostList />
