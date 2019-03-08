@@ -11,6 +11,7 @@ class PostModel {
 
   static onePost(post) {
     let request = axios.get(`${endPoint}`);
+    return request;
   }
 
   static userPosts(userId) {
