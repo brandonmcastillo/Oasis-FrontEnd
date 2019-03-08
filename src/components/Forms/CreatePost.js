@@ -18,6 +18,7 @@ class CreatePost extends Component {
 
   componentDidMount = () => {
     console.log('this function is working');
+    console.log(this.state)
     CityModel.all().then(response => {
       console.log(response.data);
       this.setState({
@@ -32,8 +33,11 @@ class CreatePost extends Component {
 
     if (localStorage.userId === undefined) {
       return;
-    }
-
+    } else if (this.state.city === undefined) {
+      // alert(';pick city')
+      return
+    } else {
+    
     let newPost = {
       title: this.state.title,
       content: this.state.content
@@ -53,6 +57,7 @@ class CreatePost extends Component {
     });
     //close the modal
     window.location.reload(true);
+  }
   };
 
   render() {
@@ -74,7 +79,7 @@ class CreatePost extends Component {
       >
         <Modal.Header>
           <Modal.Title id="contained-modal-title-vcenter">
-            New Post karma
+            New Post
           </Modal.Title>
         </Modal.Header>
 
@@ -84,6 +89,7 @@ class CreatePost extends Component {
             noValidate
             validated={this.state.validated}
             onSubmit={e => this.handleSubmit(e)}
+            
           >
             <Form.Row>
               <Form.Group as={Col} md="12" controlId="validationPostTitle">
@@ -107,7 +113,9 @@ class CreatePost extends Component {
                 as="select"
                 name="city"
                 onChange={this.handleCreatePostOnChange}
+                required
               >
+              <option>Select a city below</option>
                 {options}
               </Form.Control>
             </Form.Group>
