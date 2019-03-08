@@ -14,7 +14,8 @@ import './Profile.css'
     dateJoined: '',
     editInput: 'hidden',
     editMode: 'show',
-    userId: localStorage.getItem('userId'),
+    // userId: localStorage.getItem('userId'),
+    userId: '5c804ce1390c2b0722e64b9a',
     userPosts: []
   }
   componentDidMount = () => {
@@ -25,7 +26,6 @@ import './Profile.css'
   // userId = '5c804ce1390c2b0722e64b9a'
   fetchUser = () => {
     UserModel.getUser(this.state.userId).then(response => {
-      console.log(response)
       this.setState({
         username: response.data.username,
         email: response.data.email,
@@ -37,10 +37,18 @@ import './Profile.css'
 
   fetchPosts = () => {
     PostModel.userPosts(this.state.userId).then(response => {
-      console.log(response.data)
       this.setState({
         userPosts: response.data
       })
+    })
+  }
+
+  deletePost = (postId) => {
+    PostModel.delete(postId).then( response => {
+      let userPosts = this.state.userPosts.filter(function(post) {
+        return post._id !== response.data._id
+      });
+      this.setState({ userPosts })
     })
   }
 
@@ -55,7 +63,8 @@ import './Profile.css'
         username: response.data.username,
         email:response.data.email,
         city: response.data.city,
-        editInput: 'hidden'
+        editInput: 'hidden',
+        editMode: 'show   '
       })
     })
   }
@@ -83,9 +92,11 @@ import './Profile.css'
             </Col>
             <Col xs={12} sm={12} md={8}>
               {/* User Posts */}
-              <CreateUserPost/>
               <h2 className="Your-Post">Your Posts</h2>
-              <PostList userPosts={this.state.userPosts}/>
+              <CreateUserPost/>
+              <PostList 
+                userPosts={this.state.userPosts}
+                deletePost={this.deletePost}/>
               </Col>
               </Row>
       </Container>
