@@ -5,6 +5,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import UserModel from '../../models/UserModel'
 import PostModel from '../../models/PostModel'
 import CreateUserPost from './CreateUserPost'
+import './Profile.css'
  class Profile extends Component {
   state = {
     username: '',
@@ -12,6 +13,7 @@ import CreateUserPost from './CreateUserPost'
     city: '',
     dateJoined: '',
     editInput: 'hidden',
+    editMode: 'show',
     userId: localStorage.getItem('userId'),
     userPosts: []
   }
@@ -43,7 +45,7 @@ import CreateUserPost from './CreateUserPost'
   }
 
   updateInfo = () => {
-    this.setState({ editInput: 'show' })
+    this.setState({ editInput: 'show', editMode: 'hidden' })
   }
 
 
@@ -58,10 +60,14 @@ import CreateUserPost from './CreateUserPost'
     })
   }
 
+  hideUpdate = () => {
+    this.setState({ editInput: 'hidden', editMode: 'show'})
+  }
+
   render() {
     return (
       <div>
-      <Container fluid={true}>
+      <Container className="container-profile" fluid={true}>
         <Row noGutters={false}>
             <Col xs={12} sm={12} md={4}>
               <UserProfileList 
@@ -70,17 +76,16 @@ import CreateUserPost from './CreateUserPost'
                 city={this.state.city}
                 dateJoined={this.state.dateJoined}
                 editInput={this.state.editInput}
+                editMode={this.state.editMode}
                 updateInfo={this.updateInfo}
-                onSubmit={this.onSubmit}
-                saveInfo={this.saveInfo}/>
+                saveInfo={this.saveInfo}
+                hideUpdate={this.hideUpdate}/>
             </Col>
             <Col xs={12} sm={12} md={8}>
               {/* User Posts */}
               <CreateUserPost/>
               <h2 className="Your-Post">Your Posts</h2>
               <PostList userPosts={this.state.userPosts}/>
-              {/* <PostList />
-              <PostList /> */}
               </Col>
               </Row>
       </Container>

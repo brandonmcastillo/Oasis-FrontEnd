@@ -59,7 +59,7 @@ class CitiesContainer extends Component {
         <Container>
           <Row>
             <Col sm={4} md={4}>
-              <h1 className="pick-city">Locations</h1>
+              <h1 className="pick-city">Location</h1>
               <h4 className="cities-list">{citiesList}</h4>
             </Col>
             <Col sm={8} md={8}>

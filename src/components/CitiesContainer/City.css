@@ -2,3 +2,14 @@
     padding: 1em;
     
 }
+
+.ViewCity {
+    background-color: transparent;
+    border: transparent;
+    color: cyan;
+    font-size: 40px;
+}
+
+.ViewCity:focus {
+    outline:0;
+}

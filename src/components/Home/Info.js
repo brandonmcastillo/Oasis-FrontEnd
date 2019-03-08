@@ -5,7 +5,7 @@ class Info extends Component {
   render() {
     return (
       <div>
-        <Container >
+        <Container className="info-section">
           <Row>
             <h3>What do our favorite customers think about Wayfarer?</h3>
           </Row>
@@ -15,7 +15,7 @@ class Info extends Component {
                 <Card.Body>
                   <Card.Title>Amberly Wang</Card.Title>
                   <Card.Subtitle className="mb-2 text-muted">
-                    <h6>Fremont, CA</h6>
+                    <h6>San Jose, CA</h6>
                   </Card.Subtitle>
                   <Card.Text>
                     "Outstanding. I don't know what I'd do without it. I like to
@@ -33,7 +33,7 @@ class Info extends Component {
                   </Card.Subtitle>
                   <Card.Text>
                     "I've used this for my travels and it has helped me more
-                    than any other app out there.""
+                    than any other app out there."
                   </Card.Text>
                 </Card.Body>
               </Card>

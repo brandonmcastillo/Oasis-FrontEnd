@@ -11,9 +11,10 @@ class UserProfileList extends Component {
                     city={this.props.city}
                     dateJoined={this.props.dateJoined}
                     editInput={this.props.editInput}
+                    editMode={this.props.editMode}
                     updateInfo={this.props.updateInfo}
-                    // onSubmit={this.props.onSubmit}
-                    saveInfo={this.props.saveInfo}/>
+                    saveInfo={this.props.saveInfo}
+                    hideUpdate={this.props.hideUpdate}/>
             </div>
         );
     }
