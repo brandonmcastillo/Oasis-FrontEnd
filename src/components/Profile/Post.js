@@ -34,7 +34,6 @@ export default class Post extends Component {
 						<Col xs={8} sm={8} md={8}>
 							<h3>{this.props.title}</h3>
 							<p>{this.props.content}</p>
-							<p>{this.props.postId}</p>
 								<Button variant='secondary'>Edit</Button>
 								<Button 
 									variant='danger' 
@@ -44,7 +43,6 @@ export default class Post extends Component {
 
 								<DeleteModal 
 									deleteModalShow={this.state.deleteModalShow}
-									// showId={this.showId} 
 									handleClose={deleteModalClose}
 									postId={this.props.postId}
 									deletePost={this.deleteThePost}/>
