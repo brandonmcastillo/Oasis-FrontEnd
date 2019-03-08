@@ -5,7 +5,7 @@
         margin: auto;
 }
 
-.modal-title {
+.modal-title, .delete-modal{
     color: black;
 }
 
