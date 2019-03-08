@@ -12,6 +12,7 @@ import PostModel from '../../models/PostModel'
     city: '',
     dateJoined: '',
     editInput: 'hidden',
+    editMode: 'show',
     userId: localStorage.getItem('userId'),
     userPosts: []
   }
@@ -43,7 +44,7 @@ import PostModel from '../../models/PostModel'
   }
 
   updateInfo = () => {
-    this.setState({ editInput: 'show' })
+    this.setState({ editInput: 'show', editMode: 'hidden' })
   }
 
 
@@ -58,6 +59,10 @@ import PostModel from '../../models/PostModel'
     })
   }
 
+  hideUpdate = () => {
+    this.setState({ editInput: 'hidden', editMode: 'show'})
+  }
+
   render() {
     return (
       <div>
@@ -70,9 +75,11 @@ import PostModel from '../../models/PostModel'
                 city={this.state.city}
                 dateJoined={this.state.dateJoined}
                 editInput={this.state.editInput}
+                editMode={this.state.editMode}
                 updateInfo={this.updateInfo}
-                onSubmit={this.onSubmit}
-                saveInfo={this.saveInfo}/>
+                // onSubmit={this.onSubmit}
+                saveInfo={this.saveInfo}
+                hideUpdate={this.hideUpdate}/>
             </Col>
             <Col xs={12} sm={12} md={8}>
               {/* User Posts */}

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Container, Row, Col, Image, Button } from "react-bootstrap";
 import GA from "./GA.jpg";
 import "./Post.css";
 // Tempoary template
@@ -22,7 +22,7 @@ export default class Post extends Component {
 
               <h3>{this.props.title}</h3>
               <p>{this.props.content}</p>
-
+                
             </Col>
           </Row>
         </Container>

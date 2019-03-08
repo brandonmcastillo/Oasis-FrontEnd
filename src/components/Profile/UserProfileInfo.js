@@ -41,7 +41,7 @@ export default class UserInfo extends Component {
             <form onSubmit={this.onSubmit}>
               {/* Will Change to Current User */}
               <ListGroupItem>
-                Name: {this.props.username}
+                Name: <span className={this.props.editMode}>{this.props.username}</span>
                 <span className={this.props.editInput}>
                   <input
                     type="text"
@@ -54,7 +54,7 @@ export default class UserInfo extends Component {
               </ListGroupItem>
 
               <ListGroupItem>
-                Email: {this.props.email}
+                Email: <span className={this.props.editMode}>{this.props.email}</span>
                 <span className={this.props.editInput}>
                   <input
                     type="text"
@@ -66,7 +66,7 @@ export default class UserInfo extends Component {
                 </span>
               </ListGroupItem>
               <ListGroupItem>
-                City: {this.props.city}
+                City: <span className={this.props.editMode}>{this.props.city}</span>
                 <span className={this.props.editInput}>
                   <input
                     type="text"
@@ -84,11 +84,20 @@ export default class UserInfo extends Component {
                 <Button
                   value="Submit"
                   type="submit"
-                  className={this.props.editInput}
-                  // onClick={this.props.saveInfo}
+                  className={`btn-info ${this.props.editInput}`}
+                  onClick={this.props.saveInfo}
                 >
                   {" "}
                   Save
+                </Button>
+                <Button
+                  value="Submit"
+                  
+                  className={`btn-info ${this.props.editInput}`}
+                  onClick={this.props.hideUpdate}
+                >
+                  {" "}
+                  Cancel
                 </Button>
               </span>
             </form>
@@ -97,7 +106,7 @@ export default class UserInfo extends Component {
             <Button
               value="Submit"
               type="submit"
-              className="btn-info"
+              className={`btn-info ${this.props.editMode}`}
               onClick={this.props.updateInfo}
             >
               {" "}
