@@ -58,7 +58,7 @@ export default class UserInfo extends Component {
                 Email: <span className={this.props.editMode}>{this.props.email}</span>
                 <span className={this.props.editInput}>
                   <input
-                    type="text"
+                    type="email"
                     name="email"
                     placeholder={this.props.email}
                     onChange={this.onChange}
