@@ -13,7 +13,6 @@ class UserProfileList extends Component {
                     editInput={this.props.editInput}
                     editMode={this.props.editMode}
                     updateInfo={this.props.updateInfo}
-                    // onSubmit={this.props.onSubmit}
                     saveInfo={this.props.saveInfo}
                     hideUpdate={this.props.hideUpdate}/>
             </div>

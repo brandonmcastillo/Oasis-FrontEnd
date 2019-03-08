@@ -77,7 +77,6 @@ import PostModel from '../../models/PostModel'
                 editInput={this.state.editInput}
                 editMode={this.state.editMode}
                 updateInfo={this.updateInfo}
-                // onSubmit={this.onSubmit}
                 saveInfo={this.saveInfo}
                 hideUpdate={this.hideUpdate}/>
             </Col>
@@ -85,8 +84,6 @@ import PostModel from '../../models/PostModel'
               {/* User Posts */}
               <h2 className="Your-Post">Your Posts</h2>
               <PostList userPosts={this.state.userPosts}/>
-              {/* <PostList />
-              <PostList /> */}
               </Col>
               </Row>
       </Container>

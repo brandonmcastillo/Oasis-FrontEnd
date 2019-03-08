@@ -85,14 +85,13 @@ export default class UserInfo extends Component {
                   value="Submit"
                   type="submit"
                   className={`btn-info ${this.props.editInput}`}
-                  onClick={this.props.saveInfo}
+                  // onClick={this.props.saveInfo}
                 >
                   {" "}
                   Save
                 </Button>
                 <Button
                   value="Submit"
-                  
                   className={`btn-info ${this.props.editInput}`}
                   onClick={this.props.hideUpdate}
                 >
