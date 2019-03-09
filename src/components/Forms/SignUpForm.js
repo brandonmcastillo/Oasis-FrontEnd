@@ -105,13 +105,13 @@ class SignUpForm extends Component {
             <input
               value="Submit"
               type="submit"
-              className="btn-primary"
+              className="btn-info"
               onClick={this.props.handleSignUp}
             />
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={this.props.onHide}>Close</Button>
+          <Button className="btn-info" onClick={this.props.onHide}>Close</Button>
         </Modal.Footer>
       </Modal>
     );

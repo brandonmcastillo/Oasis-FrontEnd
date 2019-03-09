@@ -170,7 +170,7 @@ class NavBar extends Component {
         <Container>
         <Navbar className="Nav" expand="lg" fixed="top">
           <Navbar.Brand href="/">
-            <h2>Wayfarer</h2>
+            <h2 className="our-title">Oasis</h2>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">

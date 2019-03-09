@@ -144,7 +144,7 @@ class CreatePost extends Component {
         </Modal.Body>
 
         <Modal.Footer>
-          <Button onClick={this.props.onHide}>Close</Button>
+          <Button  className="btn-primary" onClick={this.props.onHide}>Close</Button>
         </Modal.Footer>
       </Modal>
     );
