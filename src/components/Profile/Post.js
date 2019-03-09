@@ -2,14 +2,33 @@ import React, { Component } from "react";
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
 import GA from "./GA.jpg";
 import "./Post.css";
+import EditModal from '../Forms/EditModal'
 import DeleteModal from '../Forms/DeleteModal'
 import PostModel from '../../models/PostModel';
+import { debug } from "util";
 
 // Tempoary template
 export default class Post extends Component {
 	state = {
+		title: '',
+		city: '',
+		content: '',
+		editModalShow: false,
 		deleteModalShow: false,
-		// postId: this.props.postId
+	}
+
+	editInput = (e) => {
+		this.setState({
+			[e.target.name]: e.target.value
+		})
+	}
+
+	editPost = (e) => {
+		let editedPost = {
+			title: this.state.title,
+			content: this.state.content
+		}
+		this.props.editPost(this.props.postId, editedPost)
 	}
 	
 	deleteThePost = () => {
@@ -17,6 +36,7 @@ export default class Post extends Component {
 	}
 	
   render() {
+		let editModalClose = () => this.setState({editModalShow: false})
 		let deleteModalClose = () => this.setState({ deleteModalShow: false})
     return (
       <div>
@@ -35,7 +55,21 @@ export default class Post extends Component {
 							<h3>{this.props.title}</h3>
 							<h4>{this.props.city}</h4>
 							<p>{this.props.content}</p>
-								<Button variant='secondary'>Edit</Button>
+								<Button 
+									variant='secondary'
+									onClick={()=> this.setState({editModalShow: true})}
+									>Edit</Button>
+								<EditModal 
+									editModalShow={this.state.editModalShow}
+									handleClose={editModalClose}
+									postId={this.props.postId}
+									onInput={this.editInput}
+									editPost={this.editPost}
+									title={this.props.title}
+									content={this.props.content}
+									/>
+								
+								
 								<Button 
 									variant='danger' 
 									onClick={()=> this.setState({ deleteModalShow: true })}

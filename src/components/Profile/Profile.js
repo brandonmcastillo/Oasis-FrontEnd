@@ -41,6 +41,26 @@ import './Profile.css'
     })
   }
 
+  editPost = (postId, editedPost) => {
+    // debugger;
+    // console.log(postId)
+    // console.log(editedPost)
+    // PostModel.update(postId, editedPost).then( response => {
+    //   console.log(response)
+    // })
+
+    function isUpdatedPost(post) {
+      return post._id === postId;
+    }
+    PostModel.update(postId, editedPost).then((response) => {
+      let userPosts = this.state.userPosts;
+      userPosts.find(post => isUpdatedPost(post)).title = editedPost.title;
+      userPosts.find(post => isUpdatedPost(post)).content = editedPost.content;
+
+      this.setState({ userPosts });
+    })
+  }
+
   deletePost = (postId) => {
     PostModel.delete(postId).then( response => {
       let userPosts = this.state.userPosts.filter(function(post) {
@@ -94,6 +114,7 @@ import './Profile.css'
               <CreateUserPost/>
               <PostList 
                 userPosts={this.state.userPosts}
+                editPost={this.editPost}
                 deletePost={this.deletePost}/>
               </Col>
               </Row>

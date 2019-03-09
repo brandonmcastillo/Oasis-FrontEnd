@@ -10,6 +10,7 @@ class PostList extends Component {
                     title={post.title}
                     city={post.cityId.name} 
                     content={post.content}
+                    editPost={this.props.editPost}
                     deletePost={this.props.deletePost}/>
         })
         return (
