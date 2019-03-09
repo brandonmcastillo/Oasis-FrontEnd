@@ -35,8 +35,8 @@ class PostModel {
   }
 
   // updateInfo should be an object with the info to be updated
-  static update(post, updateInfo) {
-    let request = axios.post(`${endPoint}/${post._id}`, updateInfo);
+  static update(postId, updateInfo) {
+    let request = axios.put(`${endPoint}/${postId}`, updateInfo);
     return request;
   }
   // delete a post
