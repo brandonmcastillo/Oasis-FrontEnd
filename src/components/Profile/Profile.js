@@ -48,17 +48,21 @@ import './Profile.css'
     // PostModel.update(postId, editedPost).then( response => {
     //   console.log(response)
     // })
+    if (editedPost.title === '' || editedPost.content === '') {
+      return
+    } else {
+      function isUpdatedPost(post) {
+        return post._id === postId;
+      }
+      PostModel.update(postId, editedPost).then((response) => {
+        let userPosts = this.state.userPosts;
+        userPosts.find(post => isUpdatedPost(post)).title = editedPost.title;
+        userPosts.find(post => isUpdatedPost(post)).content = editedPost.content;
 
-    function isUpdatedPost(post) {
-      return post._id === postId;
+        this.setState({ userPosts });
+        window.location.reload(true);
+      })
     }
-    PostModel.update(postId, editedPost).then((response) => {
-      let userPosts = this.state.userPosts;
-      userPosts.find(post => isUpdatedPost(post)).title = editedPost.title;
-      userPosts.find(post => isUpdatedPost(post)).content = editedPost.content;
-
-      this.setState({ userPosts });
-    })
   }
 
   deletePost = (postId) => {
