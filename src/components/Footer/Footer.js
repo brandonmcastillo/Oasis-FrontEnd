@@ -13,7 +13,7 @@ class Footer extends Component {
           <Row>
             <Col xs={6} sm={6} md={4}> 
               <div>
-                <p className="footer-text">Project <span className="titleName">Wayfarer</span> is created by Amberly Wang, Brandon Castillo, Karma Drukpa and Michael Claus. Made with &hearts; at GA WDI51.  </p>
+                <p className="footer-text">Project <span className="titleName">Oasis</span> is created by Amberly Wang, Brandon Castillo, Karma Drukpa and Michael Claus. Made with &hearts; at GA WDI51.  </p>
             </div>  
             </Col>
             <Col xs={6} sm={6} md={8}>
