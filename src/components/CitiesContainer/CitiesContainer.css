@@ -2,26 +2,28 @@ body {
     padding-top: 80px;
 }
 
+
 .pick-city {
     padding-top: 30px;
     border-bottom: 1px inset cyan;
-    color:white;
+    color: white;
     font-family: 'Montserrat', 'Sans-serif';
 }
 
 
 div.cities-list.media-body {
-    background-color:rgba(32, 32, 32, 0.945);
+    background-color: rgba(32, 32, 32, 0.945);
     border-bottom: 1px solid black;
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
-    
+
 }
 
 div.cities-list.media-body:hover {
-    background-color:rgba(44, 44, 44, 0.945);
-    border: 1px solid rgba(44, 44, 44, 0.945);;
-   
+    background-color: rgba(44, 44, 44, 0.945);
+    border: 1px solid rgba(44, 44, 44, 0.945);
+    ;
+
 }
 
 .cities-list {

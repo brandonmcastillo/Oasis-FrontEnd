@@ -29,13 +29,12 @@ class PostContainer extends Component {
                 })
               }
             >
-              {' '}
-              +{' '}
-            </Button>{' '}
+              +
+            </Button>
             <CreatePost show={this.state.modalShow} onHide={modalClose} />{' '}
-            <div> {posts} </div>{' '}
-          </Col>{' '}
-        </Row>{' '}
+            <div> {posts} </div>
+          </Col>
+        </Row>
       </Container>
     );
   }

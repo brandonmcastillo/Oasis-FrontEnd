@@ -1,3 +1,5 @@
+
+
 import React, { Component } from "react";
 import UserProfileList from "./UserProfileList";
 import PostList from "./PostList";
@@ -6,6 +8,7 @@ import UserModel from "../../models/UserModel";
 import PostModel from "../../models/PostModel";
 import CreateUserPost from "./CreateUserPost";
 import "./Profile.css";
+
 class Profile extends Component {
   state = {
     username: "",
@@ -42,6 +45,7 @@ class Profile extends Component {
   };
 
   editPost = (postId, editedPost) => {
+
     // debugger;
     // console.log(postId)
     // console.log(editedPost)
@@ -66,7 +70,6 @@ class Profile extends Component {
 
   }
 
-
   deletePost = postId => {
     PostModel.delete(postId).then(response => {
       let userPosts = this.state.userPosts.filter(function(post) {
@@ -78,6 +81,7 @@ class Profile extends Component {
 
   updateInfo = () => {
     this.setState({ editInput: "show", editMode: "hidden" });
+
   };
 
   saveInfo = newUserInfo => {
@@ -88,12 +92,14 @@ class Profile extends Component {
         city: response.data.city,
         editInput: "hidden",
         editMode: "show   "
+
       });
     });
   };
 
   hideUpdate = () => {
     this.setState({ editInput: "hidden", editMode: "show" });
+
   };
 
   render() {

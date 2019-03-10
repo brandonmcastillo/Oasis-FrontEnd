@@ -1,7 +1,6 @@
-
 import CreatePost from '../Forms/CreatePost';
 import React, { Component } from 'react';
-import './CreateUserPost.css'
+import './CreateUserPost.css';
 import { Button } from 'react-bootstrap';
 import PostModel from '../../models/PostModel';
 
@@ -22,14 +21,19 @@ class CreateUserPost extends Component {
 
   modalClose = () => {
     this.setState({ modalShow: false });
-  }
+  };
 
   render() {
     return (
       <div>
         <div>
-          <Button className="create-user-post" onClick={() => this.setState({modalShow: true})}>+</Button>
-          <CreatePost show={this.state.modalShow} onHide={this.modalClose}/>
+          <Button
+            className="create-user-post"
+            onClick={() => this.setState({ modalShow: true })}
+          >
+            +
+          </Button>
+          <CreatePost show={this.state.modalShow} onHide={this.modalClose} />
         </div>
       </div>
     );

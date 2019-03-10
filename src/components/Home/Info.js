@@ -10,6 +10,7 @@ class Info extends Component {
           <p>Oasis is a travel community where you can post and see what others are saying about their favorite locations around the world. Get insights from locals or experienced travelers about the best places to eat, shop, or sight see. Whether you are traveling someplace new or returning to a favorite destination, Oasis is here for you to post, share, and learn.</p>
 
           <p>To begin using Oasis, sign up for a free account and browse the cities list.</p>
+
         </Container>
         <Container className="info-section">
           <Row>
@@ -34,7 +35,7 @@ class Info extends Component {
                 <Card.Body>
                   <Card.Title>Robyn Banks</Card.Title>
                   <Card.Subtitle className="mb-2 text-muted">
-                  <h6>Melbourne, Australia</h6>
+                    <h6>Melbourne, Australia</h6>
                   </Card.Subtitle>
                   <Card.Text>
                     "I've used this for my travels and it has helped me more
