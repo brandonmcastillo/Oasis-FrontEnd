@@ -18,13 +18,12 @@ class Info extends Component {
             <Col sm={12} md={4}>
               <Card className="Card" style={{ width: '18rem' }}>
                 <Card.Body>
-                  <Card.Title>Marcus Delgado</Card.Title>
+                  <Card.Title>Justin Tyme</Card.Title>
                   <Card.Subtitle className="mb-2 text-muted">
-                    <h6>Modesto, California</h6>
+                    <h6>San Francisco, California</h6>
                   </Card.Subtitle>
                   <Card.Text>
-                    "Outstanding. I don't know what I'd do without it. I love to
-                    use this on the go."
+                  "I love this app. Oasis did exactly what you said it does. It is both attractive and user-friendly.
                   </Card.Text>
                 </Card.Body>
               </Card>
@@ -32,13 +31,13 @@ class Info extends Component {
             <Col sm={12} md={4}>
               <Card className="Card" style={{ width: '18rem' }}>
                 <Card.Body>
-                  <Card.Title>Jack Ellingwood</Card.Title>
+                  <Card.Title>Robyn Banks</Card.Title>
                   <Card.Subtitle className="mb-2 text-muted">
                   <h6>Melbourne, Australia</h6>
                   </Card.Subtitle>
                   <Card.Text>
                     "I've used this for my travels and it has helped me more
-                    than any other app out there."
+                    than any other app out there. 10/10."
                   </Card.Text>
                 </Card.Body>
               </Card>
@@ -46,13 +45,13 @@ class Info extends Component {
             <Col sm={12} md={4}>
               <Card className="Card" style={{ width: '18rem' }}>
                 <Card.Body>
-                  <Card.Title>Brock Whitbread-Cole</Card.Title>
+                  <Card.Title>Will Power</Card.Title>
                   <Card.Subtitle className="mb-2 text-muted">
                     <h6>Toronto, Ontario, Canada</h6>
                   </Card.Subtitle>
                   <Card.Text>
                     "This application changed my life! I discovered it in 2019.
-                    My friends and family will be using this"
+                    My friends and family will be using this."
                   </Card.Text>
                 </Card.Body>
               </Card>
