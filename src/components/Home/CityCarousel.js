@@ -32,10 +32,7 @@ class CityCarousel extends Component {
               onSelect={this.handleSelect}
             >
               <Carousel.Item>
-<<<<<<< HEAD
-=======
-                {" "}
->>>>>>> 90bc1d5e8dbf02b6e8dee7ea21c92ca7f220d318
+            
                 <img
                   className="picture d-block w-100"
                   src={Seattle}
