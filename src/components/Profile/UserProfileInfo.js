@@ -3,8 +3,6 @@ import { Card, ListGroup, ListGroupItem, Button, Image } from 'react-bootstrap';
 import './UserProfileInfo.css';
 import GA from './GA.jpg';
 
-// import{ md5 } from 'md5js';
-
 class UserInfo extends Component {
   state = {
     username: this.props.username,
@@ -31,30 +29,19 @@ class UserInfo extends Component {
     this.props.saveInfo(newUserInfo);
   };
 
-  // generateAvatarUrl(emailAddress) {
-  //   const emailHash = md5(emailAddress);
-  //   return `https://www.gravatar.com/avatar/${emailHash}?d=identicon`;
-  // }
-
   render() {
     return (
       <div>
         <Card className="Profile-Card">
-          <Image
-            className="Profile-image"
-            // src={this.generateAvatarUrl(this.props.email)}
-            src={GA}
-            roundedCircle
-            fluid
-          />
+          <Image className="Profile-image" src={GA} roundedCircle fluid />
           <Card.Body>
             <Card.Title className="title">Welcome to your profile!</Card.Title>
           </Card.Body>
+
           <ListGroup className="list-group-flush">
             <form onSubmit={this.onSubmit}>
-              {/* Will Change to Current User */}
               <ListGroupItem>
-                Name:{' '}
+                Name:
                 <span className={this.props.editMode}>
                   {this.props.username}
                 </span>
@@ -70,7 +57,7 @@ class UserInfo extends Component {
               </ListGroupItem>
 
               <ListGroupItem>
-                Email:{' '}
+                Email:
                 <span className={this.props.editMode}>{this.props.email}</span>
                 <span className={this.props.editInput}>
                   <input
@@ -83,7 +70,7 @@ class UserInfo extends Component {
                 </span>
               </ListGroupItem>
               <ListGroupItem>
-                City:{' '}
+                City:
                 <span className={this.props.editMode}>{this.props.city}</span>
                 <span className={this.props.editInput}>
                   <input
@@ -104,7 +91,6 @@ class UserInfo extends Component {
                   type="submit"
                   className={`btn-info edit-button ${this.props.editInput}`}
                 >
-                  {' '}
                   Save
                 </Button>
                 <Button
@@ -112,7 +98,6 @@ class UserInfo extends Component {
                   className={`btn-info edit-button ${this.props.editInput}`}
                   onClick={this.props.hideUpdate}
                 >
-                  {' '}
                   Cancel
                 </Button>
               </Card.Body>
@@ -125,8 +110,7 @@ class UserInfo extends Component {
               className={`btn-info`}
               onClick={this.props.updateInfo}
             >
-              {' '}
-              Edit{' '}
+              Edit
             </Button>
           </Card.Body>
         </Card>

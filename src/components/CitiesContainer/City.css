@@ -1,6 +1,6 @@
 .cities-list {
     padding: 1em;
-    
+
 }
 
 .ViewCity {
@@ -11,10 +11,10 @@
 }
 
 .ViewCity:focus {
-    outline:0;
+    outline: 0;
 }
 
 img {
-    width: 100%;;
-    height: 100%;;
+    width: 100%;
+    height: 100%;
 }
