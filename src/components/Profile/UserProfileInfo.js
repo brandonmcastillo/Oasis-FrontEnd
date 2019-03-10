@@ -1,9 +1,11 @@
-import React, { Component } from "react";
-import { Card, ListGroup, ListGroupItem, Button, Image } from "react-bootstrap";
-import "./UserProfileInfo.css";
-import GA from "./GA.jpg";
+import React, { Component } from 'react';
+import { Card, ListGroup, ListGroupItem, Button, Image } from 'react-bootstrap';
+import './UserProfileInfo.css';
+import GA from './GA.jpg';
 
-export default class UserInfo extends Component {
+// import{ md5 } from 'md5js';
+
+class UserInfo extends Component {
   state = {
     username: this.props.username,
     email: this.props.email,
@@ -16,25 +18,35 @@ export default class UserInfo extends Component {
     });
   };
 
-
   onSubmit = e => {
     e.preventDefault();
     if (
-      this.state.username === undefined 
-      || this.state.email === undefined
-      || this.state.city === undefined
+      this.state.username === undefined ||
+      this.state.email === undefined ||
+      this.state.city === undefined
     ) {
-      return
+      return;
     }
     let newUserInfo = this.state;
     this.props.saveInfo(newUserInfo);
   };
 
+  // generateAvatarUrl(emailAddress) {
+  //   const emailHash = md5(emailAddress);
+  //   return `https://www.gravatar.com/avatar/${emailHash}?d=identicon`;
+  // }
+
   render() {
     return (
       <div>
         <Card className="Profile-Card">
-          <Image className="Profile-image" src={GA} roundedCircle fluid />
+          <Image
+            className="Profile-image"
+            // src={this.generateAvatarUrl(this.props.email)}
+            src={GA}
+            roundedCircle
+            fluid
+          />
           <Card.Body>
             <Card.Title className="title">Welcome to your profile!</Card.Title>
           </Card.Body>
@@ -42,7 +54,10 @@ export default class UserInfo extends Component {
             <form onSubmit={this.onSubmit}>
               {/* Will Change to Current User */}
               <ListGroupItem>
-                Name: <span className={this.props.editMode}>{this.props.username}</span>
+                Name:{' '}
+                <span className={this.props.editMode}>
+                  {this.props.username}
+                </span>
                 <span className={this.props.editInput}>
                   <input
                     type="text"
@@ -55,7 +70,8 @@ export default class UserInfo extends Component {
               </ListGroupItem>
 
               <ListGroupItem>
-                Email: <span className={this.props.editMode}>{this.props.email}</span>
+                Email:{' '}
+                <span className={this.props.editMode}>{this.props.email}</span>
                 <span className={this.props.editInput}>
                   <input
                     type="email"
@@ -67,7 +83,8 @@ export default class UserInfo extends Component {
                 </span>
               </ListGroupItem>
               <ListGroupItem>
-                City: <span className={this.props.editMode}>{this.props.city}</span>
+                City:{' '}
+                <span className={this.props.editMode}>{this.props.city}</span>
                 <span className={this.props.editInput}>
                   <input
                     type="text"
@@ -87,7 +104,7 @@ export default class UserInfo extends Component {
                   type="submit"
                   className={`btn-info edit-button ${this.props.editInput}`}
                 >
-                  {" "}
+                  {' '}
                   Save
                 </Button>
                 <Button
@@ -95,7 +112,7 @@ export default class UserInfo extends Component {
                   className={`btn-info edit-button ${this.props.editInput}`}
                   onClick={this.props.hideUpdate}
                 >
-                  {" "}
+                  {' '}
                   Cancel
                 </Button>
               </Card.Body>
@@ -108,8 +125,8 @@ export default class UserInfo extends Component {
               className={`btn-info`}
               onClick={this.props.updateInfo}
             >
-              {" "}
-              Edit{" "}
+              {' '}
+              Edit{' '}
             </Button>
           </Card.Body>
         </Card>
@@ -117,3 +134,5 @@ export default class UserInfo extends Component {
     );
   }
 }
+
+export default UserInfo;
