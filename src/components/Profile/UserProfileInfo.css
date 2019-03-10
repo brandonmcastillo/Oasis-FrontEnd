@@ -1,9 +1,20 @@
 .list-group-item, .title  {
-    color: black;
+    color: white;
+    background-color:rgba(32, 32, 32, 0.945);
+    border-bottom: 1px solid black;
 }
 
 .Profile-Card {
     margin-left: 30px;
+    background-color:rgba(32, 32, 32, 0.945);
+    /* border-bottom: 1px solid black;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px; */
+    border: 1px solid black;
+}
+
+.list-group-item, .title {
+    border: none;
 }
 
 .Profile-image {
