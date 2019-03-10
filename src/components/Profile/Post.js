@@ -4,10 +4,7 @@ import GA from "./GA.jpg";
 import "./Post.css";
 import EditModal from '../Forms/EditModal'
 import DeleteModal from '../Forms/DeleteModal'
-import PostModel from '../../models/PostModel';
-import { debug } from "util";
 
-// Tempoary template
 export default class Post extends Component {
 	state = {
 		title: '',
