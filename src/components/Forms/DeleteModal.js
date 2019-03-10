@@ -1,16 +1,17 @@
-import React, { Component } from 'react'
-import { Modal, Button } from "react-bootstrap";
+import React, { Component } from 'react';
+import { Modal, Button } from 'react-bootstrap';
 
 export default class DeleteModal extends Component {
   render() {
     return (
       <div>
-        <Modal 
-            className="delete-modal"
-            show={this.props.deleteModalShow} 
-            onHide={this.props.handleClose}
-            aria-labelledby="contained-modal-title-vcenter"
-            centered>
+        <Modal
+          className="delete-modal"
+          show={this.props.deleteModalShow}
+          onHide={this.props.handleClose}
+          aria-labelledby="contained-modal-title-vcenter"
+          centered
+        >
           <Modal.Header>
             <Modal.Title>Delete Post?</Modal.Title>
           </Modal.Header>
@@ -25,6 +26,6 @@ export default class DeleteModal extends Component {
           </Modal.Footer>
         </Modal>
       </div>
-    )
+    );
   }
 }

@@ -1,7 +1,6 @@
-import React, { Component } from "react";
-import { Form, Col, InputGroup, Modal, Button } from "react-bootstrap";
-// import BgVideo from './BgVideo';
-import "./Form.css";
+import React, { Component } from 'react';
+import { Form, Col, InputGroup, Modal, Button } from 'react-bootstrap';
+import './Form.css';
 class LoginForm extends Component {
   constructor(...args) {
     super(...args);
@@ -76,7 +75,9 @@ class LoginForm extends Component {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button className="btn-info" onClick={this.props.onHide}>Close</Button>
+          <Button className="btn-info" onClick={this.props.onHide}>
+            Close
+          </Button>
         </Modal.Footer>
       </Modal>
     );

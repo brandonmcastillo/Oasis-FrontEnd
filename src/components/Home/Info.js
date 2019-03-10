@@ -7,10 +7,19 @@ class Info extends Component {
       <div>
         <Container>
           <h3>Our Mission</h3>
-          <p>Oasis is a travel community where you can post and see what others are saying about their favorite locations around the world. Get insights from locals or experienced travelers about the best places to eat, shop, or sight see. Whether you are traveling someplace new or returning to a favorite destination, Oasis is here for you to post, share, and learn.</p>
+          <p>
+            Oasis is a travel community where you can post and see what others
+            are saying about their favorite locations around the world. Get
+            insights from locals or experienced travelers about the best places
+            to eat, shop, or sight see. Whether you are traveling someplace new
+            or returning to a favorite destination, Oasis is here for you to
+            post, share, and learn.
+          </p>
 
-          <p>To begin using Oasis, sign up for a free account and browse the cities list.</p>
-
+          <p>
+            To begin using Oasis, sign up for a free account and browse the
+            cities list.
+          </p>
         </Container>
         <Container className="info-section">
           <Row>
@@ -25,7 +34,8 @@ class Info extends Component {
                     <h6>San Francisco, California</h6>
                   </Card.Subtitle>
                   <Card.Text>
-                  "I love this app. Oasis did exactly what you said it does. It is both attractive and user-friendly.
+                    "I love this app. Oasis did exactly what you said it does.
+                    It is both attractive and user-friendly.
                   </Card.Text>
                 </Card.Body>
               </Card>
