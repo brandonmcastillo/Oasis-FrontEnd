@@ -15,21 +15,6 @@
   top: 48%;
   transform: translateY(-50%);
 }
-<<<<<<< HEAD
-
-.picture {
-    width: 100%;
-    height: 700px;
-
-    transition: filter .3s ease-in;
-    -webkit-filter: grayscale(0%);
-    filter: grayscale(0%);
-}
-
-.picture:hover {
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-=======
 /* Images */
 .picture {
   width: 100%;
@@ -43,25 +28,15 @@
 .picture:hover {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
->>>>>>> 90bc1d5e8dbf02b6e8dee7ea21c92ca7f220d318
 }
 
 .real-gold {
-<<<<<<< HEAD
-    color: rgb(255, 196, 0);
-    margin: 0;
-    font-size: 4.8em;
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 10px;
-    font-size: 8vw;
-=======
   color: rgb(255, 196, 0);
   margin: 0;
   font-size: 4.8em;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 10px;
   font-size: 8vw;
->>>>>>> 90bc1d5e8dbf02b6e8dee7ea21c92ca7f220d318
 }
 
 .real-white {
@@ -74,41 +49,6 @@
 }
 
 .refl-gold {
-<<<<<<< HEAD
-    font-size: 4.8em;
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 10px;
-    font-size: 8vw;
-    color: rgb(255, 196, 0);
-    margin: 0;
-    -moz-transform: scaleY(-1);
-    -o-transform: scaleY(-1);
-    -webkit-transform: scaleY(-1);
-    transform: scaleY(-1);
-    -webkit-mask-image: -webkit-gradient(linear, right top, right bottom, from(transparent), color-stop(20%, transparent), to(rgba(0, 0, 0, 0.4)));
-}
-
-.refl-white {
-    font-size: 4.8em;
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 10px;
-    font-size: 8vw;
-    color: white;
-    margin: 0;
-    -moz-transform: scaleY(-1);
-    -o-transform: scaleY(-1);
-    -webkit-transform: scaleY(-1);
-    transform: scaleY(-1);
-    -webkit-mask-image: -webkit-gradient(linear, right top, right bottom, from(transparent), color-stop(20%, transparent), to(rgba(0, 0, 0, 0.4)));
-}
-
-#header {
-    display: inline-block;
-    background-color: transparent;
-    padding: 20px 40px;
-    border-radius: 10px;
-}
-=======
   font-size: 4.8em;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 10px;
@@ -156,4 +96,3 @@
   padding: 20px 40px;
   border-radius: 10px;
 }
->>>>>>> 90bc1d5e8dbf02b6e8dee7ea21c92ca7f220d318
