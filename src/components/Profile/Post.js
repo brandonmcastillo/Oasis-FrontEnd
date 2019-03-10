@@ -5,9 +5,7 @@ import './Post.css';
 import EditModal from '../Forms/EditModal';
 import DeleteModal from '../Forms/DeleteModal';
 import PostModel from '../../models/PostModel';
-import { debug } from 'util';
 
-// Tempoary template
 export default class Post extends Component {
   state = {
     title: '',
@@ -35,7 +33,12 @@ export default class Post extends Component {
 	
 	deleteThePost = () => {
 		this.props.deletePost(this.props.postId)
-	}
+  }
+  
+  redirectView = () => { 
+    localStorage.postId = this.props.postId;
+    window.location.href = "/showpost";
+  }
 
   render() {
     let editModalClose = () => this.setState({ editModalShow: false });
@@ -45,7 +48,6 @@ export default class Post extends Component {
         <Container fluid={true}>
           <Row noGutters={false}>
             <Col xs={4} sm={4} md={4}>
-              {/* Must Change to this.props.user */}
               <Image
                 className="Profile-image-post"
                 src={GA}
@@ -54,7 +56,10 @@ export default class Post extends Component {
               />
             </Col>
             <Col xs={8} sm={8} md={8}>
-              <h3>{this.props.title}</h3>
+              
+              <h3 className="view-post" onClick={this.redirectView}>{this.props.title}</h3>
+
+
               <h4>{this.props.city}</h4>
               <p>{this.props.content}</p>
               <Button

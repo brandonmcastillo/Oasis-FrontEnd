@@ -8,3 +8,7 @@
     height: 90px;
     width: 90px;
 }
+
+.view-post:hover {
+    cursor: pointer;
+}
