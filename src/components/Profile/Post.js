@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import React, { Component } from "react";
-import { Container, Row, Col, Image, Button } from "react-bootstrap";
-import GA from "./GA.jpg";
-import "./Post.css";
-import EditModal from '../Forms/EditModal'
-import DeleteModal from '../Forms/DeleteModal'
-=======
 import React, { Component } from 'react';
 import { Container, Row, Col, Image, Button } from 'react-bootstrap';
 import GA from './GA.jpg';
@@ -13,7 +5,6 @@ import './Post.css';
 import EditModal from '../Forms/EditModal';
 import DeleteModal from '../Forms/DeleteModal';
 import PostModel from '../../models/PostModel';
->>>>>>> 7cbecb40a64c0ed2c6bbe582b720db1c5a4e6995
 
 export default class Post extends Component {
   state = {

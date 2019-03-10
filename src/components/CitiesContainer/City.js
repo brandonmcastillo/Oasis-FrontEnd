@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Media } from 'react-bootstrap';
-// import Sf from "./CitiesPosts/sf.jpeg";
 import './City.css';
 class City extends Component {
   passUpState = () => {

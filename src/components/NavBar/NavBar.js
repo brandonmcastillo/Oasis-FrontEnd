@@ -50,7 +50,6 @@ class NavBar extends Component {
       UserModel.signup(newUser)
         .then(res => {
           console.log("success", res);
-          alert(res.data.message);
           console.log(res.data);
           localStorage.token = res.data.signedJwt;
           localStorage.userId = res.data.user._id;
@@ -61,9 +60,7 @@ class NavBar extends Component {
             userId: res.data.user._id,
             password: "",
             email: res.data.user.email
-            // isLoggedIn: true
           });
-          //how do we redirect in react without
           window.location.href = "/profile";
         })
         .catch(err => console.log(err));
@@ -89,9 +86,6 @@ class NavBar extends Component {
           localStorage.userId = res.data.user._id;
           localStorage.isLoggedIn = true;
           console.log(localStorage);
-          // this.setState({
-          //   isLoggedIn: true
-          // });
           window.location.href = "/profile";
         })
         .catch(err => {
@@ -107,7 +101,6 @@ class NavBar extends Component {
       userId: "",
       password: "",
       email: ""
-      // isLoggedIn: false
     });
     localStorage.clear();
   };
