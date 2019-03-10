@@ -1,4 +1,4 @@
-.our-title{
+.our-title {
   font-family: "Montserrat", sans-serif;
   color: white;
 }
@@ -14,7 +14,7 @@ nav {
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-  color:  cyan;
+  color: cyan;
   cursor: pointer;
 }
 
