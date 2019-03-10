@@ -8,6 +8,7 @@ class Info extends Component {
         <Container>
           <h3>Our Mission</h3>
           <p>Oasis is a travel community where you can post and see what others are saying about their favorite locations around the world. Get insights from locals or experienced travelers about the best places to eat, shop, or sight see. Whether you are traveling someplace new or returning to a favorite destination, Oasis is here for you to post, share, and learn.</p>
+
           <p>To begin using Oasis, sign up for a free account and browse the cities list.</p>
         </Container>
         <Container className="info-section">
