@@ -8,6 +8,7 @@ import MyRoutes from './config/routes';
 // import LoginForm from './components/Forms/LoginForm'
 
 class App extends Component {
+
   render() {
     return (
       <div className="App">

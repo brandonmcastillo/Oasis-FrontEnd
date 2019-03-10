@@ -9,8 +9,6 @@ footer {
     display: flex;
     justify-content: center;
     background-color: black;
-    position:fixed;
-
 }
 
 .titleName {

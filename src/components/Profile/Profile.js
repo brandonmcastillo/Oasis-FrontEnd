@@ -109,6 +109,8 @@ class Profile extends Component {
     } else {
       profileRender = (
         <div>
+          <Container>
+            <Row>
           <Col xs={12} sm={12} md={4}>
             <UserProfileList
               username={this.state.username}
@@ -131,7 +133,9 @@ class Profile extends Component {
               editPost={this.editPost}
               deletePost={this.deletePost}
             />
-          </Col>
+              </Col>
+              </Row>
+            </Container>
         </div>
       );
     }
