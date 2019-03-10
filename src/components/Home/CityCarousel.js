@@ -19,10 +19,9 @@ class CityCarousel extends Component {
     });
   };
 
-
   render() {
     const { index, direction } = this.state;
-  
+
     return (
       <Container fluid={true}>
         <Row noGutters={false}>
@@ -32,14 +31,16 @@ class CityCarousel extends Component {
               direction={direction}
               onSelect={this.handleSelect}
             >
+
             <Carousel.Item> <img className="picture d-block w-100" src={Seattle} alt="First slide" />
               <Carousel.Caption>
                 <div id="header">
                   <h1 className="real-gold">SEATTLE</h1> 
                   <h1 className="refl-gold">SEATTLE</h1>
                   </div>
-              </Carousel.Caption>
-            </Carousel.Item>
+                </Carousel.Caption>
+              </Carousel.Item>
+
 
             <Carousel.Item><img className="picture d-block w-100" src={Sanfrancisco} alt="Second slide" />
               <Carousel.Caption>

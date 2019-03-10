@@ -8,7 +8,7 @@ class CityHeader extends Component {
         <Media>
           <Media.Body>
             <h1>{this.props.title}</h1>
-            <img src={this.props.img}/>
+            <img src={this.props.img} alt=""/>
           </Media.Body>
         </Media>
       </div>

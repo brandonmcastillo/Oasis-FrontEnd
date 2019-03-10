@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { Form, Col, InputGroup, Modal, Button } from 'react-bootstrap';
-import CityModel from '../../models/CityModel';
-import PostModel from '../../models/PostModel';
+import React, { Component } from "react";
+import { Form, Col, InputGroup, Modal, Button } from "react-bootstrap";
+import CityModel from "../../models/CityModel";
+import PostModel from "../../models/PostModel";
 
 class CreatePost extends Component {
   state = {
@@ -17,14 +17,14 @@ class CreatePost extends Component {
   };
 
   componentDidMount = () => {
-    console.log('this function is working');
-    console.log(this.state)
+    console.log("this function is working");
+    console.log(this.state);
     CityModel.all().then(response => {
       console.log(response.data);
       this.setState({
         cities: response.data
       });
-      console.log(this.state, 'after setstate in component');
+      console.log(this.state, "after setstate in component");
     });
   };
 
@@ -35,29 +35,30 @@ class CreatePost extends Component {
       return;
     } else if (this.state.city === undefined) {
       // alert(';pick city')
-      return
+      return;
+    } else if (this.state.title.length >= 200) {
+      alert("Please make the title less than 200 characters...");
     } else {
-    
-    let newPost = {
-      title: this.state.title,
-      content: this.state.content
-    };
-    let id;
-    this.state.cities.forEach(city => {
-      console.log(this.state.name, 'that was the state', city.name);
-      if (this.state.city === city.name) {
-        id = city._id;
-      }
-    });
-    newPost.cityId = id;
-    newPost.userId = localStorage.userId;
+      let newPost = {
+        title: this.state.title,
+        content: this.state.content
+      };
+      let id;
+      this.state.cities.forEach(city => {
+        console.log(this.state.name, "that was the state", city.name);
+        if (this.state.city === city.name) {
+          id = city._id;
+        }
+      });
+      newPost.cityId = id;
+      newPost.userId = localStorage.userId;
 
-    PostModel.create(newPost).then(res => {
-      console.log(res);
-    });
-    //close the modal
-    window.location.reload(true);
-  }
+      PostModel.create(newPost).then(res => {
+        console.log(res);
+      });
+      //close the modal
+      window.location.reload(true);
+    }
   };
 
   render() {
@@ -78,9 +79,7 @@ class CreatePost extends Component {
         centered
       >
         <Modal.Header>
-          <Modal.Title id="contained-modal-title-vcenter">
-            New Post
-          </Modal.Title>
+          <Modal.Title id="contained-modal-title-vcenter">New Post</Modal.Title>
         </Modal.Header>
 
         <Modal.Body>
@@ -89,7 +88,6 @@ class CreatePost extends Component {
             noValidate
             validated={this.state.validated}
             onSubmit={e => this.handleSubmit(e)}
-            
           >
             <Form.Row>
               <Form.Group as={Col} md="12" controlId="validationPostTitle">
@@ -115,7 +113,7 @@ class CreatePost extends Component {
                 onChange={this.handleCreatePostOnChange}
                 required
               >
-              <option>Select a city below</option>
+                <option>Select a city below</option>
                 {options}
               </Form.Control>
             </Form.Group>
@@ -144,7 +142,9 @@ class CreatePost extends Component {
         </Modal.Body>
 
         <Modal.Footer>
-          <Button  className="btn-primary" onClick={this.props.onHide}>Close</Button>
+          <Button className="btn-primary" onClick={this.props.onHide}>
+            Close
+          </Button>
         </Modal.Footer>
       </Modal>
     );

@@ -1,30 +1,31 @@
-import React, { Component } from "react";
-import CityHeader from "./CityHeader";
-import PostContainer from "./PostContainer";
-import { Container, Row, Col } from 'react-bootstrap'
-import './CityPostContainer.css'
+import React, { Component } from 'react';
+import CityHeader from './CityHeader';
+import PostContainer from './PostContainer';
+import { Container, Row, Col } from 'react-bootstrap';
+import './CityPostContainer.css';
 class CityPostContainer extends Component {
-  
   render() {
     return (
       <div>
         <Container>
           <Row>
             <Col md={12}>
-              <CityHeader title={this.props.data.name} img={this.props.data.image} />
-              
+              <CityHeader
+                title={this.props.data.name}
+                img={this.props.data.image}
+              />
             </Col>
           </Row>
           <Row>
             <Col md={12}>
               <h1 className="RecentPost">Recent Posts</h1>
-              </Col>
+            </Col>
           </Row>
           <Row>
-        <PostContainer posts={this.props.posts} />
-      </Row>
+            <PostContainer posts={this.props.posts} />
+          </Row>
         </Container>
-        </div>
+      </div>
     );
   }
 }
