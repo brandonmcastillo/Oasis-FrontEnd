@@ -24,6 +24,7 @@ export default class Post extends Component {
 	}
 
 	editPost = (e) => {
+		e.preventDefault()
 		let editedPost = {
 			title: this.state.title,
 			content: this.state.content
