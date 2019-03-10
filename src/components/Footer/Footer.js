@@ -11,16 +11,16 @@ class Footer extends Component {
       <footer>
         <Container className="footer-contain">
           <Row>
-            <Col xs={12} sm={6} md={6} lg={6}>
+            <Col xs={12} sm={6} md={6} lg={4}>
               <div>
                 <p className="footer-text">
                   Project <span className="titleName">Oasis</span> is created by
                   Amberly Wang, Brandon Castillo, Karma Drukpa and Michael
-                  Claus. Made with &hearts; at GA WDI51.{' '}
+                  Claus. Made with &hearts; at GA WDI51.
                 </p>
               </div>
             </Col>
-            <Col xs={12} sm={6} md={6} lg={6}>
+            <Col xs={12} sm={6} md={6} lg={8}>
               <a href="https://github.com/awang617" aria-hidden="true">
                 <img className="git-icon" src={amberly} alt="amberly" />
               </a>
