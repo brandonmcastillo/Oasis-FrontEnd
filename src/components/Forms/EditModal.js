@@ -55,12 +55,7 @@ export default class EditModal extends Component {
                   />
                 </Form.Group>
               </Form.Row>
-              <input
-                value="Submit"
-                type="submit"
-                className="btn-primary"
-                //   onClick={this.props.editPost}
-              />
+              <input value="Submit" type="submit" className="btn-primary" />
             </Form>
           </Modal.Body>
           <Modal.Footer>

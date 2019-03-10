@@ -1,13 +1,13 @@
-import React, { Component } from "react";
-import { Form, Col, InputGroup, Modal, Button } from "react-bootstrap";
-import "./Form.css";
+import React, { Component } from 'react';
+import { Form, Col, InputGroup, Modal, Button } from 'react-bootstrap';
+import './Form.css';
 class SignUpForm extends Component {
   constructor(...args) {
     super(...args);
 
     this.state = { validated: false };
   }
-  //this is just for validate form, not actual api call
+
   handleSubmit(event) {
     event.preventDefault();
     const form = event.currentTarget;
@@ -101,7 +101,7 @@ class SignUpForm extends Component {
                 </Form.Control.Feedback>
               </Form.Group>
             </Form.Row>
-            
+
             <input
               value="Submit"
               type="submit"
@@ -111,7 +111,9 @@ class SignUpForm extends Component {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button className="btn-info" onClick={this.props.onHide}>Close</Button>
+          <Button className="btn-info" onClick={this.props.onHide}>
+            Close
+          </Button>
         </Modal.Footer>
       </Modal>
     );

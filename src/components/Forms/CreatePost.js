@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import { Form, Col, InputGroup, Modal, Button } from "react-bootstrap";
-import CityModel from "../../models/CityModel";
-import PostModel from "../../models/PostModel";
+import React, { Component } from 'react';
+import { Form, Col, InputGroup, Modal, Button } from 'react-bootstrap';
+import CityModel from '../../models/CityModel';
+import PostModel from '../../models/PostModel';
 
 class CreatePost extends Component {
   state = {
@@ -17,14 +17,14 @@ class CreatePost extends Component {
   };
 
   componentDidMount = () => {
-    console.log("this function is working");
+    console.log('this function is working');
     console.log(this.state);
     CityModel.all().then(response => {
       console.log(response.data);
       this.setState({
         cities: response.data
       });
-      console.log(this.state, "after setstate in component");
+      console.log(this.state, 'after setstate in component');
     });
   };
 
@@ -34,10 +34,9 @@ class CreatePost extends Component {
     if (localStorage.userId === undefined) {
       return;
     } else if (this.state.city === undefined) {
-      // alert(';pick city')
       return;
     } else if (this.state.title.length >= 200) {
-      alert("Please make the title less than 200 characters...");
+      alert('Please make the title less than 200 characters...');
     } else {
       let newPost = {
         title: this.state.title,
@@ -45,7 +44,7 @@ class CreatePost extends Component {
       };
       let id;
       this.state.cities.forEach(city => {
-        console.log(this.state.name, "that was the state", city.name);
+        console.log(this.state.name, 'that was the state', city.name);
         if (this.state.city === city.name) {
           id = city._id;
         }
@@ -56,7 +55,6 @@ class CreatePost extends Component {
       PostModel.create(newPost).then(res => {
         console.log(res);
       });
-      //close the modal
       window.location.reload(true);
     }
   };
