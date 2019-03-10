@@ -4,3 +4,7 @@
   margin: 1rem;
 }
 
+
+.paragraph {
+  word-break: break-all;
+}
