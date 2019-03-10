@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import './Info.css';
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import React, { Component } from "react";
+import "./Info.css";
+import { Container, Row, Col, Card } from "react-bootstrap";
 class Info extends Component {
   render() {
     return (
@@ -27,7 +27,7 @@ class Info extends Component {
           </Row>
           <Row>
             <Col sm={12} md={4}>
-              <Card className="Card" style={{ width: '18rem' }}>
+              <Card className="Card" style={{ width: "18rem" }}>
                 <Card.Body>
                   <Card.Title>Justin Tyme</Card.Title>
                   <Card.Subtitle className="mb-2 text-muted">
@@ -41,7 +41,7 @@ class Info extends Component {
               </Card>
             </Col>
             <Col sm={12} md={4}>
-              <Card className="Card" style={{ width: '18rem' }}>
+              <Card className="Card" style={{ width: "18rem" }}>
                 <Card.Body>
                   <Card.Title>Robyn Banks</Card.Title>
                   <Card.Subtitle className="mb-2 text-muted">
@@ -55,7 +55,7 @@ class Info extends Component {
               </Card>
             </Col>
             <Col sm={12} md={4}>
-              <Card className="Card" style={{ width: '18rem' }}>
+              <Card className="Card" style={{ width: "18rem" }}>
                 <Card.Body>
                   <Card.Title>Will Power</Card.Title>
                   <Card.Subtitle className="mb-2 text-muted">

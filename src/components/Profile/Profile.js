@@ -45,13 +45,6 @@ class Profile extends Component {
   };
 
   editPost = (postId, editedPost) => {
-
-    // debugger;
-    // console.log(postId)
-    // console.log(editedPost)
-    // PostModel.update(postId, editedPost).then( response => {
-    //   console.log(response)
-    // })
     if (editedPost.title === '' || editedPost.content === '') {
       return
     } else {

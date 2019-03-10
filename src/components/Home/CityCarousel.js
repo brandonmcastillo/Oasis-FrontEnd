@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { Carousel, Container, Row, Col } from 'react-bootstrap';
-import Seattle from './seattle.jpeg';
-import Sanfrancisco from './sanfrancisco.jpeg';
-import Sydney from './sydney.jpeg';
-import London from './london.jpeg';
-import './CityCarousel.css';
+import React, { Component } from "react";
+import { Carousel, Container, Row, Col } from "react-bootstrap";
+import Seattle from "./seattle.jpeg";
+import Sanfrancisco from "./sanfrancisco.jpeg";
+import Sydney from "./sydney.jpeg";
+import London from "./london.jpeg";
+import "./CityCarousel.css";
 
 class CityCarousel extends Component {
   state = {
@@ -32,6 +32,10 @@ class CityCarousel extends Component {
               onSelect={this.handleSelect}
             >
               <Carousel.Item>
+<<<<<<< HEAD
+=======
+                {" "}
+>>>>>>> 90bc1d5e8dbf02b6e8dee7ea21c92ca7f220d318
                 <img
                   className="picture d-block w-100"
                   src={Seattle}

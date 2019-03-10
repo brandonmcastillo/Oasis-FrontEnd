@@ -4,7 +4,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import CityPostContainer from "./CitiesPosts/CityPostContainer";
 import "./CitiesContainer.css";
 
-import axios from "axios";
 import CityModel from "../../models/CityModel";
 import PostModel from "../../models/PostModel";
 // This is our main container that includes cities and post list component
