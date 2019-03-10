@@ -8,3 +8,8 @@
 .paragraph {
   word-break: break-all;
 }
+
+.paragraph:hover {
+  cursor: pointer;
+  color: grey;
+}

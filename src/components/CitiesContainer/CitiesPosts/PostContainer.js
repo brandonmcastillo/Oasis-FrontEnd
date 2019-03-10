@@ -15,7 +15,7 @@ class PostContainer extends Component {
       });
 
     let posts = this.props.posts.map((post, idx) => {
-      return <Post post={post} key={idx} />;
+      return <Post post={post} key={idx} postId={post._id}/>;
     });
     return (
       <Container>
