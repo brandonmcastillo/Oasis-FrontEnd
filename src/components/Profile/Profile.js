@@ -1,20 +1,23 @@
-import React, { Component } from 'react';
-import UserProfileList from './UserProfileList';
-import PostList from './PostList';
-import { Container, Row, Col } from 'react-bootstrap';
-import UserModel from '../../models/UserModel';
-import PostModel from '../../models/PostModel';
-import CreateUserPost from './CreateUserPost';
-import './Profile.css';
+
+
+import React, { Component } from "react";
+import UserProfileList from "./UserProfileList";
+import PostList from "./PostList";
+import { Container, Row, Col } from "react-bootstrap";
+import UserModel from "../../models/UserModel";
+import PostModel from "../../models/PostModel";
+import CreateUserPost from "./CreateUserPost";
+import "./Profile.css";
+
 class Profile extends Component {
   state = {
-    username: '',
-    email: '',
-    city: '',
-    dateJoined: '',
-    editInput: 'hidden',
-    editMode: 'show',
-    userId: localStorage.getItem('userId'),
+    username: "",
+    email: "",
+    city: "",
+    dateJoined: "",
+    editInput: "hidden",
+    editMode: "show",
+    userId: localStorage.getItem("userId"),
     userPosts: []
   };
   componentDidMount = () => {
@@ -42,17 +45,30 @@ class Profile extends Component {
   };
 
   editPost = (postId, editedPost) => {
-    function isUpdatedPost(post) {
-      return post._id === postId;
-    }
-    PostModel.update(postId, editedPost).then(response => {
-      let userPosts = this.state.userPosts;
-      userPosts.find(post => isUpdatedPost(post)).title = editedPost.title;
-      userPosts.find(post => isUpdatedPost(post)).content = editedPost.content;
 
-      this.setState({ userPosts });
-    });
-  };
+    // debugger;
+    // console.log(postId)
+    // console.log(editedPost)
+    // PostModel.update(postId, editedPost).then( response => {
+    //   console.log(response)
+    // })
+    if (editedPost.title === '' || editedPost.content === '') {
+      return
+    } else {
+      function isUpdatedPost(post) {
+        return post._id === postId;
+      }
+      PostModel.update(postId, editedPost).then((response) => {
+        let userPosts = this.state.userPosts;
+        userPosts.find(post => isUpdatedPost(post)).title = editedPost.title;
+        userPosts.find(post => isUpdatedPost(post)).content = editedPost.content;
+
+        this.setState({ userPosts });
+        window.location.reload(true);
+      })
+    }
+
+  }
 
   deletePost = postId => {
     PostModel.delete(postId).then(response => {
@@ -64,7 +80,8 @@ class Profile extends Component {
   };
 
   updateInfo = () => {
-    this.setState({ editInput: 'show', editMode: 'hidden' });
+    this.setState({ editInput: "show", editMode: "hidden" });
+
   };
 
   saveInfo = newUserInfo => {
@@ -73,45 +90,56 @@ class Profile extends Component {
         username: response.data.username,
         email: response.data.email,
         city: response.data.city,
-        editInput: 'hidden',
-        editMode: 'show   '
+        editInput: "hidden",
+        editMode: "show   "
+
       });
     });
   };
 
   hideUpdate = () => {
-    this.setState({ editInput: 'hidden', editMode: 'show' });
+    this.setState({ editInput: "hidden", editMode: "show" });
+
   };
 
   render() {
+    let profileRender;
+    if (!localStorage.userId && !localStorage.token) {
+      profileRender = <p>Please login...</p>;
+    } else {
+      profileRender = (
+        <div>
+          <Col xs={12} sm={12} md={4}>
+            <UserProfileList
+              username={this.state.username}
+              email={this.state.email}
+              city={this.state.city}
+              dateJoined={this.state.dateJoined}
+              editInput={this.state.editInput}
+              editMode={this.state.editMode}
+              updateInfo={this.updateInfo}
+              saveInfo={this.saveInfo}
+              hideUpdate={this.hideUpdate}
+            />
+          </Col>
+          <Col xs={12} sm={12} md={8}>
+            {/* User Posts */}
+            <h2 className="Your-Post">Your Posts</h2>
+            <CreateUserPost />
+            <PostList
+              userPosts={this.state.userPosts}
+              editPost={this.editPost}
+              deletePost={this.deletePost}
+            />
+          </Col>
+        </div>
+      );
+    }
     return (
       <div>
         <Container className="container-profile" fluid={true}>
-          <Row noGutters={false}>
-            <Col xs={12} sm={12} md={4}>
-              <UserProfileList
-                username={this.state.username}
-                email={this.state.email}
-                city={this.state.city}
-                dateJoined={this.state.dateJoined}
-                editInput={this.state.editInput}
-                editMode={this.state.editMode}
-                updateInfo={this.updateInfo}
-                saveInfo={this.saveInfo}
-                hideUpdate={this.hideUpdate}
-              />
-            </Col>
-            <Col xs={12} sm={12} md={8}>
-              {/* User Posts */}
-              <h2 className="Your-Post">Your Posts</h2>
-              <CreateUserPost />
-              <PostList
-                userPosts={this.state.userPosts}
-                editPost={this.editPost}
-                deletePost={this.deletePost}
-              />
-            </Col>
-          </Row>
+          <Row noGutters={false} />
+          {profileRender}
         </Container>
       </div>
     );

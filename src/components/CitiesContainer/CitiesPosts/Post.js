@@ -5,7 +5,7 @@ class Post extends Component {
     return (
       <div className="PostDiv">
         <p className="paragraph">
-          {this.props.post.title} created by: {this.props.post.userId.username}
+          {this.props.post.title} | Created by: {this.props.post.userId.username}
         </p>
         <p>Tip: {this.props.post.content}</p>
       </div>

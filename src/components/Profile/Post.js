@@ -23,17 +23,19 @@ export default class Post extends Component {
     });
   };
 
-  editPost = e => {
-    let editedPost = {
-      title: this.state.title,
-      content: this.state.content
-    };
-    this.props.editPost(this.props.postId, editedPost);
-  };
-
-  deleteThePost = () => {
-    this.props.deletePost(this.props.postId);
-  };
+ 
+	editPost = (e) => {
+		e.preventDefault()
+		let editedPost = {
+			title: this.state.title,
+			content: this.state.content
+		}
+		this.props.editPost(this.props.postId, editedPost)
+	}
+	
+	deleteThePost = () => {
+		this.props.deletePost(this.props.postId)
+	}
 
   render() {
     let editModalClose = () => this.setState({ editModalShow: false });

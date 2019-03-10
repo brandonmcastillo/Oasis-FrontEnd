@@ -31,60 +31,42 @@ class CityCarousel extends Component {
               direction={direction}
               onSelect={this.handleSelect}
             >
-              <Carousel.Item>
-                <img
-                  className="picture d-block w-100"
-                  src={Seattle}
-                  alt="First slide"
-                />
-                <Carousel.Caption>
-                  <div id="header">
-                    <h1 className="real">SEATTLE</h1>
-                    <h1 className="refl">SEATTLE</h1>
+
+            <Carousel.Item> <img className="picture d-block w-100" src={Seattle} alt="First slide" />
+              <Carousel.Caption>
+                <div id="header">
+                  <h1 className="real-gold">SEATTLE</h1> 
+                  <h1 className="refl-gold">SEATTLE</h1>
                   </div>
                 </Carousel.Caption>
               </Carousel.Item>
 
-              <Carousel.Item>
-                <img
-                  className="picture d-block w-100"
-                  src={Sanfrancisco}
-                  alt="Second slide"
-                />
-                <Carousel.Caption>
-                  <div id="header">
-                    <h1 className="real">BAY AREA</h1>
-                    <h1 className="refl">BAY AREA</h1>
-                  </div>
-                </Carousel.Caption>
-              </Carousel.Item>
 
-              <Carousel.Item>
-                <img
-                  className="picture d-block w-100"
-                  src={London}
-                  alt="Third slide"
-                />
-                <Carousel.Caption>
-                  <div id="header">
-                    <h1 className="real">LONDON</h1>
-                    <h1 className="refl">LONDON</h1>
+            <Carousel.Item><img className="picture d-block w-100" src={Sanfrancisco} alt="Second slide" />
+              <Carousel.Caption>
+                <div id="header">
+                  <h1 className="real-white">BAY AREA</h1>
+                  <h1 className="refl-white">BAY AREA</h1>
+              </div>  
+              </Carousel.Caption>
+             </Carousel.Item>
+
+            <Carousel.Item><img className="picture d-block w-100" src={London} alt="Third slide" />
+              <Carousel.Caption>
+                <div id="header">
+                  <h1 className="real-gold">LONDON</h1> 
+                  <h1 className="refl-gold">LONDON</h1> 
                   </div>
-                </Carousel.Caption>
-              </Carousel.Item>
-              <Carousel.Item>
-                <img
-                  className="picture d-block w-100"
-                  src={Sydney}
-                  alt="Fourth slide"
-                />
-                <Carousel.Caption>
-                  <div id="header">
-                    <h1 className="real">SYDNEY</h1>
-                    <h1 className="refl">SYDNEY</h1>
-                  </div>
-                </Carousel.Caption>
-              </Carousel.Item>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item><img className="picture d-block w-100" src={Sydney} alt="Fourth slide" />
+              <Carousel.Caption>
+                <div id="header">
+                <h1 className="real-white">SYDNEY</h1> 
+                <h1 className="refl-white">SYDNEY</h1> 
+                </div>
+              </Carousel.Caption>
+            </Carousel.Item>
             </Carousel>
           </Col>
         </Row>
