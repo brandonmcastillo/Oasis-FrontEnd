@@ -36,6 +36,7 @@ Our team was very focused and we all communicated with each other very well. The
 ![](README_assets/edgecases-signup.png)
 
 We realized that if our users submitted an empty signup form it would crash our server, so we came up with an edge case for that scenario. If any of the fields are empty then the function will break and no information will be sent to the server. We ended up resuing the same concept for other forms on our application such as logging in, creating a post, or editing a user.
+<br />
 ![](README_assets/showpost-componentdidmount.png)
 
 To create the show page for posts, we needed to grab the post id and render it onto the next page. We couldn't pass the post id over to the new page, so we stored it in local storage and then grabbed it as the component mounted.
