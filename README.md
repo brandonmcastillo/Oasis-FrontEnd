@@ -21,6 +21,7 @@ Some challenges for us were:
 * User validation
 * Combining React.js with Bootstrap
 * City Container and Profile Container componenets
+
 React.js proved to be the source of a lot of difficulty as we first started this project, because of the top to bottom data flow and React's separation of concerns. It is important to make sure components are independent, but as our application grew, so did the number of files and the information we had to keep track of. Component states and functions often had to be passed down and it was sometimes hard to keep track of everything.
 <br />
 Some of our wins were getting the user signed up and logged in and getting their information to render on their profile. Implementing all of our CRUD methods, and working out the bugs was also a big win. As we worked on these features, sometimes we found unnoticed bugs in previous parts of the code and we had to fix those issues first. 
@@ -30,8 +31,11 @@ Our team was very focused and we all communicated with each other very well. The
 * Search bar
 * Refactoring/Optimization
 * Some style elements
+
 ## Code Snippets
 ![](README_assets/edgecases-signup.png)
+
 We realized that if our users submitted an empty signup form it would crash our server, so we came up with an edge case for that scenario. If any of the fields are empty then the function will break and no information will be sent to the server. We ended up resuing the same concept for other forms on our application such as logging in, creating a post, or editing a user.
 ![](README_assets/showpost-componentdidmount.png)
+
 To create the show page for posts, we needed to grab the post id and render it onto the next page. We couldn't pass the post id over to the new page, so we stored it in local storage and then grabbed it as the component mounted.
