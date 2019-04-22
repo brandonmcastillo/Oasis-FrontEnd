@@ -1,5 +1,5 @@
 # Oasis Front End
-The front end section for our application Oasis that allows users to share tips (AKA posts) about their favorite locations around the world created by Brandon Castillo, Karma Drukpa, Amberly Wang and Michael Claus. Users who are logged in can see their profile and their posts. They can edit their profile, create new posts, edit posts, and delete posts. Users can also see different cities and the posts for each specific city.
+The front end section for our application Oasis. Oasis is a travel community application where users can share tips about their favorite locations around the world. Oasis was created by Brandon Castillo, Karma Drukpa, Amberly Wang and Michael Claus. Users who are logged in can see their profile and their posts. They can edit their profile, create new posts, edit posts, and delete posts. Users can also see different cities and the posts for each specific city.
 
 http://nameless-crag-43595.herokuapp.com/
 
@@ -13,10 +13,10 @@ http://nameless-crag-43595.herokuapp.com/
 ## Our Approach and Process
 Since this project uses React.js, we decided we needed to first plan out the structure of our components and establish a baseline for how the components and data would interact wih each other. It was important to start planning our components out before we started coding so that we wouldn't run into organization problems as we started coding.
 ![](https://trello-attachments.s3.amazonaws.com/5c7d6628351a436652f4b9ac/5c7d997c3eb06d4ec83b3b10/6460ca0200169a84858620d58d8f1289/IMG_5454_(2).jpg)
-Once we had our basic file structure set up, and added some hardcoded dummy text, we started to gradually integrate the information from the database to our front end application. We worked with the city and user entities separately, first getting them to render on the page, and then populating the pages with user posts.
+Once we had our basic file structure set up and added some hardcoded dummy text, we started to gradually integrate the information from the database to our front end application. We worked with the city and user entities separately, first getting them to render on the page, and then populating the pages with user posts.
 <br />
 After we had rendered everything, we started to implement the CRUD methods onto our front end application. As we worked on our application's functionality, we also paid attention to the styling of the page and structured our grids and responsiveness as we went coded. We used the project sprints as a guideline for what features we needed to include and how users should interact with them.
-## Challenges and Wins
+## Challenges and Successes
 Some challenges for us were:
 * User validation
 * Combining React.js with Bootstrap
