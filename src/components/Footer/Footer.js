@@ -14,9 +14,9 @@ class Footer extends Component {
             <Col xs={12} sm={6} md={6} lg={4}>
               <div>
                 <p className="footer-text">
-                  Project <span className="titleName">Oasis</span> is created by
+                  Project <span className="titleName">Oasis</span> was created by
                   Amberly Wang, Brandon Castillo, Karma Drukpa and Michael
-                  Claus. Made with &hearts; at GA WDI51.
+                  Claus. © 2019 All Rights Reserved
                 </p>
               </div>
             </Col>

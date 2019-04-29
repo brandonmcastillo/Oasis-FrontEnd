@@ -3,10 +3,10 @@
     border-radius: none;
     border: transparent;
     text-align: center;
-    font-size: 4em;
-    margin-left: 3.5em;
+    font-size: 3em;
     color: white;
     box-shadow:none;
+    margin: auto;
 }
 
 .create-user-post:hover, .create-user-post:focus, .create-user-post:active {
@@ -17,8 +17,8 @@
 
 
 .PostDiv {
-    background-color: rgba(32, 32, 32, 0.945);
-    border-top: 1px solid cyan;
+    background-color: #4ca2d7;
+    border-top: 1px solid white;
     padding: 20px;
     text-align: center;
     color: white;

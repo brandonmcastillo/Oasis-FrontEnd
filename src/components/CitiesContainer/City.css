@@ -6,8 +6,9 @@
 .ViewCity {
     background-color: transparent;
     border: transparent;
-    color: cyan;
+    color: yellow;
     font-size: 40px;
+    cursor: pointer;
 }
 
 .ViewCity:focus {

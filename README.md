@@ -13,6 +13,10 @@ Our backend code for this project can be found here: https://github.com/brandonm
 - React.js
 - React Bootstrap
 
+## Bugs/Issues
+- Responsiveness Needs to be fixed
+- Button layout for Edit and Delete in Profile
+
 ## Our Approach and Process
 Since this project uses React.js, we decided we needed to first plan out the structure of our components and establish a baseline for how the components and data would interact wih each other. It was important to start planning our components out before we started coding so that we wouldn't run into organization problems as we started coding.
 ![](https://trello-attachments.s3.amazonaws.com/5c7d6628351a436652f4b9ac/5c7d997c3eb06d4ec83b3b10/6460ca0200169a84858620d58d8f1289/IMG_5454_(2).jpg)

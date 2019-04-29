@@ -89,13 +89,13 @@ class UserInfo extends Component {
                 <Button
                   value="Submit"
                   type="submit"
-                  className={`btn-info edit-button ${this.props.editInput}`}
+                  className={`btn-outline edit-button ${this.props.editInput}`}
                 >
                   Save
                 </Button>
                 <Button
                   value="Submit"
-                  className={`btn-info edit-button ${this.props.editInput}`}
+                  className={`btn-warning edit-button ${this.props.editInput}`}
                   onClick={this.props.hideUpdate}
                 >
                   Cancel
@@ -107,7 +107,7 @@ class UserInfo extends Component {
             <Button
               value="Submit"
               type="submit"
-              className={`btn-info`}
+              className={`btn-danger`}
               onClick={this.props.updateInfo}
             >
               Edit

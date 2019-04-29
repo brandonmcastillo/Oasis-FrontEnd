@@ -3,14 +3,17 @@ footer {
     right:0;
     padding-top: 10px;
     width: 100%;
-    display: flex;
+    position:fixed;
     justify-content: center;
-    background-color: black;
+    background-color: 
+    #4ca2d7;
+    color: white;
 }
 
 .titleName {
     font-style: bold;
-    color: cyan;
+    font-size: 14px;
+    color: yellow;
     
 }
 
@@ -20,7 +23,7 @@ footer {
 
 footer a {
     text-align: center;
-    color: white;
+    color: black;
     font-size: 16px;
     margin: 0 10px;
 }

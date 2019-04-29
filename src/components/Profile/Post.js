@@ -4,7 +4,7 @@ import GA from './GA.jpg';
 import './Post.css';
 import EditModal from '../Forms/EditModal';
 import DeleteModal from '../Forms/DeleteModal';
-import PostModel from '../../models/PostModel';
+// import PostModel from '../../models/PostModel';
 
 export default class Post extends Component {
   state = {
@@ -63,7 +63,8 @@ export default class Post extends Component {
               <h4>{this.props.city}</h4>
               <p>{this.props.content}</p>
               <Button
-                variant="secondary"
+                class="profile-buttons"
+                variant="primary"
                 onClick={() => this.setState({ editModalShow: true })}
               >
                 Edit
@@ -79,6 +80,7 @@ export default class Post extends Component {
               />
 
               <Button
+              
                 variant="danger"
                 onClick={() => this.setState({ deleteModalShow: true })}
               >

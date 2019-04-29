@@ -30,48 +30,19 @@
   filter: grayscale(100%);
 }
 
-.real-gold {
-  color: rgb(255, 196, 0);
-  margin: 0;
-  font-size: 4.8em;
-  font-family: "Montserrat", sans-serif;
-  letter-spacing: 10px;
-  font-size: 8vw;
-}
 
 .real-white {
   color: white;
   margin: 0;
   font-size: 4.8em;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
   letter-spacing: 10px;
   font-size: 8vw;
-}
-
-.refl-gold {
-  font-size: 4.8em;
-  font-family: "Montserrat", sans-serif;
-  letter-spacing: 10px;
-  font-size: 8vw;
-  color: rgb(255, 196, 0);
-  margin: 0;
-  -moz-transform: scaleY(-1);
-  -o-transform: scaleY(-1);
-  -webkit-transform: scaleY(-1);
-  transform: scaleY(-1);
-  -webkit-mask-image: -webkit-gradient(
-    linear,
-    right top,
-    right bottom,
-    from(transparent),
-    color-stop(20%, transparent),
-    to(rgba(0, 0, 0, 0.4))
-  );
 }
 
 .refl-white {
   font-size: 4.8em;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
   letter-spacing: 10px;
   font-size: 8vw;
   color: white;

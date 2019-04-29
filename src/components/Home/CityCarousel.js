@@ -40,8 +40,8 @@ class CityCarousel extends Component {
                 />
                 <Carousel.Caption>
                   <div id="header">
-                    <h1 className="real-gold">SEATTLE</h1>
-                    <h1 className="refl-gold">SEATTLE</h1>
+                    <h1 className="real-white">SEATTLE</h1>
+                    <h1 className="refl-white">SEATTLE</h1>
                   </div>
                 </Carousel.Caption>
               </Carousel.Item>
@@ -68,8 +68,8 @@ class CityCarousel extends Component {
                 />
                 <Carousel.Caption>
                   <div id="header">
-                    <h1 className="real-gold">LONDON</h1>
-                    <h1 className="refl-gold">LONDON</h1>
+                    <h1 className="real-white">LONDON</h1>
+                    <h1 className="refl-white">LONDON</h1>
                   </div>
                 </Carousel.Caption>
               </Carousel.Item>

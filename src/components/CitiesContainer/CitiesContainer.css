@@ -5,27 +5,26 @@ body {
 
 .pick-city {
     padding-top: 30px;
-    border-bottom: 1px inset cyan;
     color: white;
     font-family: 'Montserrat', 'Sans-serif';
 }
 
 
 div.cities-list.media-body {
-    background-color: rgba(32, 32, 32, 0.945);
-    border-bottom: 1px solid black;
-    border-bottom-right-radius: 20px;
-    border-top-right-radius: 20px;
+    background-color: #4ca2d7;
+    border: 1px double white;
+    border-radius: 3px;
+
 
 }
 
 div.cities-list.media-body:hover {
-    background-color: rgba(44, 44, 44, 0.945);
-    border: 1px solid rgba(44, 44, 44, 0.945);
-    ;
+    background-color:
+    #4ca2d7d2;
 
 }
 
 .cities-list {
-    font-size: 16px;
+    font-size: 20px;
+    color:white;
 }

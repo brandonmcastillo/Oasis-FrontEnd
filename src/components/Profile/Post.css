@@ -1,9 +1,13 @@
 .Profile-image-post {
-    margin-top: 20px;
-    height: 90px;
-    width: 90px;
+    margin-top: 50px;
+    height: 50px;
+    width: 50px;
 }
 
 .view-post:hover {
     cursor: pointer;
+}
+
+.profile-buttons {
+    padding: 500px;
 }

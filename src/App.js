@@ -4,9 +4,6 @@ import Footer from './components/Footer/Footer'
 import './App.css';
 import MyRoutes from './config/routes';
 
-// import SignUpForm from './components/Forms/SignUpForm'
-// import LoginForm from './components/Forms/LoginForm'
-
 class App extends Component {
 
   render() {

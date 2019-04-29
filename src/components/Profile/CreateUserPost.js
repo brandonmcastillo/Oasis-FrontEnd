@@ -26,7 +26,7 @@ class CreateUserPost extends Component {
   render() {
     return (
       <div>
-        <div>
+        <div class="container">
           <Button
             className="create-user-post"
             onClick={() => this.setState({ modalShow: true })}
