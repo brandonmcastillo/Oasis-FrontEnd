@@ -1,7 +1,7 @@
 # Oasis
 The front end section for our application Oasis. Oasis is a travel community application where users can share tips about their favorite locations around the world. Oasis was created by Brandon Castillo, Karma Drukpa, Amberly Wang and Michael Claus. Users who are logged in can see their profile and their posts. They can edit their profile, create new posts, edit posts, and delete posts. Users can also see different cities and the posts for each specific city.
 
-http://nameless-crag-43595.herokuapp.com/
+https://project-oasis.herokuapp.com/
 
 ## Back-End Section
 Our backend code for this project can be found here: https://github.com/brandonmcastillo/Oasis-BackEnd
