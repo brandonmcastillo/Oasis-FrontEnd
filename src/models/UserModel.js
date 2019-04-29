@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const endPoint = `https://oasis-backend.herokuapp.com/api/user`;
+const endPoint = `https://oasis-backend.herokuapp.com/user`;
 // const endPoint = `http://localhost:3001/user`;
 
 class UserModel {
