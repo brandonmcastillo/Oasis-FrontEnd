@@ -3,6 +3,10 @@ The front end section for our application Oasis. Oasis is a travel community app
 
 https://project-oasis.herokuapp.com/
 
+## FOR DEMO
+Username: demo
+Password: 123
+
 ## Back-End Section
 Our backend code for this project can be found here: https://github.com/brandonmcastillo/Oasis-BackEnd
 
